@@ -1,12 +1,10 @@
 /*Regular give.css*/
+@import placeholder
+
 .gv
 	//btn
 	&-btn
 		@extend %btn
-		&-active:active
-			box-shadow: none
-			-webkit-transform: translateY(1px)
-			transform: translateY(1px)
 		&-lg
 			padding: 1em 8em
 		&-sm
@@ -17,8 +15,8 @@
 
 	//Inputs
 	&-input
-		&-block
-			width: 100%
+		&-inline
+			width: auto
 	
 	//fonts
 	&-mn-fc

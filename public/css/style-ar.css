@@ -1,6 +1,54 @@
 /*@font-face */
 /*General */
 /*============ */
+/* Form */
+select,
+textarea {
+  padding: 0.2em 2.5em;
+  border-radius: 4px;
+}
+
+label {
+  font-weight: normal;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+
+textarea {
+  resize: none;
+  height: 10rem;
+}
+
+button {
+  border: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.form-row {
+  margin-bottom: 2.5rem;
+}
+.form-control {
+  padding: 0.6em 2.5em;
+  border: 0.1rem solid #ddd;
+  background-color: white;
+  border-radius: 0.5em;
+  width: 100%;
+  -webkit-transition: all 450ms;
+  transition: all 450ms;
+}
+.form-control:focus {
+  border-color: #97783c;
+}
+
+::-webkit-input-placeholder {
+  color: #aaa;
+}
+
+::-moz-placeholder {
+  color: #aaa;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -63,21 +111,16 @@ h4 {
   font-size: 1.8rem;
 }
 
-p {
-  margin-bottom: 1.5rem;
+h5 {
+  font-size: 1.4rem;
 }
 
-input, select, textarea {
-  display: inline-block;
-  padding: 0.6em 1.5em;
-  border: 0.1rem solid #ddd;
-  background-color: transparent;
-  border-radius: 0.5em;
-  -webkit-transition: all 450ms;
-  transition: all 450ms;
+h6 {
+  font-size: 1.2rem;
 }
-input:focus, select:focus, textarea:focus {
-  border-color: #97783c;
+
+p {
+  margin-bottom: 2.5rem;
 }
 
 table {
@@ -94,7 +137,8 @@ h1 {
   font-weight: inherit;
   line-height: inherit;
   color: green;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.5rem;
+  margin-top: 0;
 }
 
 h2 {
@@ -102,7 +146,8 @@ h2 {
   font-weight: inherit;
   line-height: inherit;
   color: green;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.5rem;
+  margin-top: 0;
 }
 
 h3 {
@@ -110,7 +155,8 @@ h3 {
   font-weight: inherit;
   line-height: inherit;
   color: green;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.5rem;
+  margin-top: 0;
 }
 
 h4 {
@@ -118,7 +164,8 @@ h4 {
   font-weight: inherit;
   line-height: inherit;
   color: green;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.5rem;
+  margin-top: 0;
 }
 
 h5 {
@@ -126,7 +173,8 @@ h5 {
   font-weight: inherit;
   line-height: inherit;
   color: green;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.5rem;
+  margin-top: 0;
 }
 
 h6 {
@@ -134,38 +182,15 @@ h6 {
   font-weight: inherit;
   line-height: inherit;
   color: green;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.5rem;
+  margin-top: 0;
 }
 
 .fa {
-  margin-right: 1.5rem;
+  margin-right: 2.5rem;
   text-decoration: none;
   font-size: 1em;
   vertical-align: middle;
-}
-
-label {
-  font-weight: normal;
-  margin-bottom: 0.5rem;
-}
-
-textarea {
-  resize: none;
-  height: 10rem;
-}
-
-button {
-  border: none;
-  color: inherit;
-  background-color: transparent;
-}
-
-::-webkit-input-placeholder {
-  color: #aaa;
-}
-
-::-moz-placeholder {
-  color: #aaa;
 }
 
 /*Slider */
@@ -246,20 +271,18 @@ button {
   background-color: #1a1a1a;
 }
 
-[type="submit"],
-[type="reset"],
-[type="button"], .gv-btn {
-  background-color: transparent;
+.gv-btn {
+  background-color: #1a1a1a;
   border-radius: 0.4em;
-  padding: 0.6em 5em;
-  cursor: pointer;
+  padding: 0.6em 2.5em;
   display: inline-block;
   text-decoration: none;
-  color: #1a1a1a;
+  color: white;
+  position: relative;
+  border: none;
+  cursor: pointer;
 }
-[type="submit"]:hover,
-[type="reset"]:hover,
-[type="button"]:hover, .gv-btn:hover {
+.gv-btn:hover {
   background-color: #1a1a1a;
   color: #4de445;
 }
@@ -383,7 +406,7 @@ button {
 
 .container {
   max-width: 960px;
-  padding: 0 1.5em;
+  padding: 0 2.5em;
   margin: 0 auto;
 }
 
@@ -506,11 +529,22 @@ button {
 /*Custom */
 /* @keyframes & transitions */
 /*Regular give.css */
-.gv-btn-active:active {
-  box-shadow: none;
-  -webkit-transform: translateY(1px);
-  transform: translateY(1px);
+.gv-btn {
+  background-color: #1a1a1a;
+  border-radius: 0.4em;
+  padding: 0.6em 2.5em;
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  position: relative;
+  border: none;
+  cursor: pointer;
 }
+.gv-btn:hover {
+  background-color: #1a1a1a;
+  color: #4de445;
+}
+
 .gv-btn-lg {
   padding: 1em 8em;
 }
@@ -521,8 +555,8 @@ button {
   display: block;
   text-align: center;
 }
-.gv-input-block {
-  width: 100%;
+.gv-input-inline {
+  width: auto;
 }
 .gv-mn-fc {
   font-family: "open-sans", sans-serif;
@@ -541,6 +575,12 @@ button {
 }
 .gv-h4 {
   font-size: 1.8rem;
+}
+.gv-h5 {
+  font-size: 1.4rem;
+}
+.gv-h6 {
+  font-size: 1.2rem;
 }
 .gv-def-sz {
   font-size: 1.6rem;
@@ -579,7 +619,7 @@ button {
   text-align: center;
 }
 .gv-mg {
-  margin: 1.5em;
+  margin: 2.5em;
 }
 .gv-mg-lg {
   margin: 5em;
@@ -609,8 +649,8 @@ button {
   margin-left: auto;
 }
 .gv-mg-tb {
-  margin-top: 1.5em;
-  margin-bottom: 1.5em;
+  margin-top: 2.5em;
+  margin-bottom: 2.5em;
 }
 .gv-mg-tb-lg {
   margin-top: 5em;
@@ -625,8 +665,8 @@ button {
   margin-top: 1em;
 }
 .gv-mg-rl {
-  margin-right: 1.5em;
-  margin-left: 1.5em;
+  margin-right: 2.5em;
+  margin-left: 2.5em;
 }
 .gv-mg-rl-lg {
   margin-right: 5em;
@@ -641,7 +681,7 @@ button {
   margin-left: 1em;
 }
 .gv-mg-tp {
-  margin-top: 1.5em;
+  margin-top: 2.5em;
 }
 .gv-mg-tp-lg {
   margin-top: 5em;
@@ -653,7 +693,7 @@ button {
   margin-top: 1em;
 }
 .gv-mg-rt {
-  margin-left: 1.5em;
+  margin-left: 2.5em;
 }
 .gv-mg-rt-lg {
   margin-left: 5em;
@@ -665,7 +705,7 @@ button {
   margin-left: 1em;
 }
 .gv-mg-bt {
-  margin-bottom: 1.5em;
+  margin-bottom: 2.5em;
 }
 .gv-mg-bt-lg {
   margin-bottom: 5em;
@@ -677,7 +717,7 @@ button {
   margin-bottom: 1em;
 }
 .gv-mg-lt {
-  margin-right: 1.5em;
+  margin-right: 2.5em;
 }
 .gv-mg-lt-lg {
   margin-right: 5em;
@@ -689,7 +729,7 @@ button {
   margin-right: 1em;
 }
 .gv-pd {
-  padding: 1.5em;
+  padding: 2.5em;
 }
 .gv-pd-lg {
   padding: 5em;
@@ -701,8 +741,8 @@ button {
   padding: 1em;
 }
 .gv-pd-tb {
-  padding-top: 1.5em;
-  padding-bottom: 1.5em;
+  padding-top: 2.5em;
+  padding-bottom: 2.5em;
 }
 .gv-pd-tb-lg {
   padding-top: 5em;
@@ -717,8 +757,8 @@ button {
   padding-bottom: 1em;
 }
 .gv-pd-rl {
-  padding-right: 1.5em;
-  padding-left: 1.5em;
+  padding-right: 2.5em;
+  padding-left: 2.5em;
 }
 .gv-pd-rl-lg {
   padding-right: 5em;
@@ -733,7 +773,7 @@ button {
   padding-left: 1em;
 }
 .gv-pd-tp {
-  padding-top: 1.5em;
+  padding-top: 2.5em;
 }
 .gv-pd-tp-lg {
   padding-top: 5em;
@@ -745,7 +785,7 @@ button {
   padding-top: 1em;
 }
 .gv-pd-rt {
-  padding-left: 1.5em;
+  padding-left: 2.5em;
 }
 .gv-pd-rt-lg {
   padding-left: 5em;
@@ -757,7 +797,7 @@ button {
   padding-left: 1em;
 }
 .gv-pd-bt {
-  padding-bottom: 1.5em;
+  padding-bottom: 2.5em;
 }
 .gv-pd-bt-lg {
   padding-bottom: 5em;
@@ -769,7 +809,7 @@ button {
   padding-bottom: 1em;
 }
 .gv-pd-lt {
-  padding-right: 1.5em;
+  padding-right: 2.5em;
 }
 .gv-pd-lt-lg {
   padding-right: 5em;
