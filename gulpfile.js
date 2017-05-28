@@ -4,7 +4,7 @@ var autoprefixer = require('gulp-autoprefixer')
 var connect = require('gulp-connect');
 
 
-//sass-en
+//sass
 gulp.task('sass', function () {
    sass('./src/sass/*.sass',{style:'expanded'})
     .on('error', sass.logError)
@@ -13,8 +13,6 @@ gulp.task('sass', function () {
     .pipe(connect.reload())
 });
 
-
-
 //watch 
 gulp.task('watch',function(){
 	gulp.watch('./src/sass/**/*.sass',['sass'])
@@ -22,13 +20,11 @@ gulp.task('watch',function(){
 })
 
 
-//html live reload
+//html
 gulp.task('html', function() {
 	gulp.src('./public/*.html')
 		.pipe(connect.reload());
-
 })
-
 
 //Localhost 
 gulp.task('server',function(){
