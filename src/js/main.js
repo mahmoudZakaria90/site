@@ -1,4 +1,4 @@
-import zekas from './header';
+import zekas from './header'
 
 
 class Person{

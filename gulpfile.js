@@ -10,6 +10,8 @@ const log 				    = require('gulp-util');
 const uglify          = require('gulp-uglify');  
 const pump            = require('pump');
 const csso            = require('gulp-csso');
+const jshint          = require('gulp-jshint');
+const notificator     = require('gulp-jshint-notify-reporter');          
 
 //sass
 gulp.task('sass', function () {
@@ -22,7 +24,7 @@ gulp.task('sass', function () {
 //watch 
 gulp.task('watch',function(){
 	gulp.watch('./src/sass/**/*.sass',['sass']);
-	gulp.watch('./src/js/**/*.js',['bundle','uglify']);
+	gulp.watch('./src/js/**/*.js',['bundle','hint','uglify']);
 	gulp.watch('./public/*.html', function(){log.log(log.colors.green('HTML Updated!'))});
 	gulp.watch(['./public/*.html','./public/css/*.css','./public/js/*.js'], reload);
 })
@@ -77,8 +79,10 @@ gulp.task('uglify', function (cb) {
 
 //JS Hint 
 gulp.task('hint', function() {
-  gulp.src('./src/js/*.js').pipe(hint())
-})
+  return gulp.src('./src/js/*.js')
+    .pipe(jshint())
+    .pipe(notificator())
+});
 
 
 //Localhost 

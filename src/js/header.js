@@ -1,1 +1,1 @@
-export default 'zekas';
+export default 'zekas'
