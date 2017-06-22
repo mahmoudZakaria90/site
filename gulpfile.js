@@ -1,12 +1,15 @@
-const gulp 				= require('gulp');
-const sass 				= require('gulp-ruby-sass');
+const gulp 				    = require('gulp');
+const sass 				    = require('gulp-ruby-sass');
 const autoprefixer 		= require('gulp-autoprefixer');
 const browserSync 		= require('browser-sync').create();
-const reload 			= browserSync.reload;
-const rollup			= require('rollup');
-const babel 			= require('rollup-plugin-babel');
-const resolve 			= require('rollup-plugin-node-resolve');
-const log 				= require('gulp-util');
+const reload 			    = browserSync.reload;
+const rollup			    = require('rollup');
+const babel 			    = require('rollup-plugin-babel');
+const resolve 			  = require('rollup-plugin-node-resolve');
+const log 				    = require('gulp-util');
+const uglify          = require('gulp-uglify');  
+const pump            = require('pump');
+const csso            = require('gulp-csso');
 
 //sass
 gulp.task('sass', function () {
@@ -19,11 +22,10 @@ gulp.task('sass', function () {
 //watch 
 gulp.task('watch',function(){
 	gulp.watch('./src/sass/**/*.sass',['sass']);
-	gulp.watch('./src/js/**/*.js',['bundle']);
+	gulp.watch('./src/js/**/*.js',['bundle','uglify']);
 	gulp.watch('./public/*.html', function(){log.log(log.colors.green('HTML Updated!'))});
 	gulp.watch(['./public/*.html','./public/css/*.css','./public/js/*.js'], reload);
 })
-
 
 //bundle
 gulp.task('bundle', function(){
@@ -51,6 +53,34 @@ gulp.task('bundle', function(){
     })
 })
 
+//CSS minify
+gulp.task('minify', function () {
+    return gulp.src('./public/css/*.css')
+        .pipe(csso())
+        .pipe(gulp.dest('./public/css/'));
+});
+
+
+//JS uglify
+gulp.task('uglify', function (cb) {
+ setTimeout(()=> {
+   pump([
+        gulp.src('./public/js/*.js'),
+        uglify(),
+        gulp.dest('./public/js/')
+    ],
+    cb
+  );
+ }, 500)
+});
+
+
+//JS Hint 
+gulp.task('hint', function() {
+  gulp.src('./src/js/*.js').pipe(hint())
+})
+
+
 //Localhost 
 gulp.task('serve',function(){
 	browserSync.init({
@@ -64,4 +94,4 @@ gulp.task('serve',function(){
 
 
 //default
-gulp.task('default',['serve','watch','sass','bundle'])
+gulp.task('default',['serve','sass','bundle','uglify','watch'])
