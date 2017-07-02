@@ -24,7 +24,7 @@ gulp.task('sass', function () {
 //watch 
 gulp.task('watch',function(){
 	gulp.watch('./src/sass/**/*.sass',['sass']);
-	gulp.watch('./src/js/**/*.js',['bundle','hint','uglify']);
+	gulp.watch('./src/js/**/*.js',['bundle','uglify','hint']);
 	gulp.watch('./public/*.html', function(){log.log(log.colors.green('HTML Updated!'))});
 	gulp.watch(['./public/*.html','./public/css/*.css','./public/js/*.js'], reload);
 })
@@ -43,7 +43,7 @@ gulp.task('bundle', function(){
       		}]
       	]
       })
-    ],
+    ]
   })
     .then(function (bundle) {
       bundle.write({
@@ -79,7 +79,7 @@ gulp.task('uglify', function (cb) {
 
 //JS Hint 
 gulp.task('hint', function() {
-  return gulp.src('./src/js/*.js')
+  return gulp.src('./public/js/*.js')
     .pipe(jshint())
     .pipe(notificator())
 });
@@ -98,4 +98,4 @@ gulp.task('serve',function(){
 
 
 //default
-gulp.task('default',['serve','sass','bundle','uglify','watch'])
+gulp.task('default',['serve','sass','bundle','uglify','hint','watch'])
