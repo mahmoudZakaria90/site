@@ -3,9 +3,8 @@ const sass 				    = require('gulp-ruby-sass');
 const autoprefixer 		= require('gulp-autoprefixer');
 const browserSync 		= require('browser-sync').create();
 const reload 			    = browserSync.reload;
-const rollup			    = require('rollup');
-const babel 			    = require('rollup-plugin-babel');
-const resolve 			  = require('rollup-plugin-node-resolve');
+const browserify      = require('browserify');
+const source          = require('vinyl-source-stream');
 const log 				    = require('gulp-util');
 const uglify          = require('gulp-uglify');  
 const pump            = require('pump');
@@ -15,10 +14,10 @@ const notificator     = require('gulp-jshint-notify-reporter');
 
 //sass
 gulp.task('sass', function () {
-   sass('./src/sass/*.sass',{style:'compressed'})
-    .on('error', sass.logError)
-    .pipe(autoprefixer())
-    .pipe(gulp.dest('./public/css'));
+ sass('./src/sass/*.sass',{style:'compressed'})
+ .on('error', sass.logError)
+ .pipe(autoprefixer())
+ .pipe(gulp.dest('./public/css'));
 });
 
 //watch 
@@ -31,35 +30,19 @@ gulp.task('watch',function(){
 
 //bundle
 gulp.task('bundle', function(){
-	return rollup.rollup({
-    entry: "./src/js/main.js",
-    plugins: [
-      resolve(),
-      babel({
-      	exclude: 'node_modules/**',
-      	presets: [
-      		["es2015", {
-      			modules: false
-      		}]
-      	]
-      })
-    ]
-  })
-    .then(function (bundle) {
-      bundle.write({
-        format: "cjs",
-        moduleName: "main",
-        dest: "./public/js/main.js",
-        sourceMap: false
-      });
-    })
-})
+	return browserify('./src/js/main.js')
+     .bundle()
+       //Pass desired output filename to vinyl-source-stream
+     .pipe(source('main.js'))
+     // Start piping stream to tasks!
+     .pipe(gulp.dest('./public/js/'))
+ })
 
 //CSS minify
 gulp.task('minify', function () {
-    return gulp.src('./public/css/*.css')
-        .pipe(csso())
-        .pipe(gulp.dest('./public/css/'));
+  return gulp.src('./public/css/*.css')
+  .pipe(csso())
+  .pipe(gulp.dest('./public/css/'));
 });
 
 
@@ -67,12 +50,12 @@ gulp.task('minify', function () {
 gulp.task('uglify', function (cb) {
  setTimeout(()=> {
    pump([
-        gulp.src('./public/js/*.js'),
-        uglify(),
-        gulp.dest('./public/js/')
+    gulp.src('./public/js/*.js'),
+    uglify(),
+    gulp.dest('./public/js/')
     ],
     cb
-  );
+    );
  }, 500)
 });
 
@@ -80,18 +63,18 @@ gulp.task('uglify', function (cb) {
 //JS Hint 
 gulp.task('hint', function() {
   return gulp.src('./public/js/*.js')
-    .pipe(jshint())
-    .pipe(notificator())
+  .pipe(jshint())
+  .pipe(notificator())
 });
 
 
 //Localhost 
 gulp.task('serve',function(){
 	browserSync.init({
-       server: {
-           baseDir: "public"
-       }
-   });
+   server: {
+     baseDir: "public"
+   }
+ });
 })
 
 
