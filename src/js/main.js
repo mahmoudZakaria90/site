@@ -1,5 +1,8 @@
+var header = require('./header.js');
 var stars = require('./stars.js');
-var headerTextSlider = require('./header.js');
 
-window.addEventListener('load', stars)
-window.addEventListener('load', headerTextSlider)
+window.addEventListener('load', function(){
+	stars();
+	header.headerTextSlider();
+	header.headerNav()
+});
