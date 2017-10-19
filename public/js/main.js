@@ -60,7 +60,7 @@ window.addEventListener('load', function () {
 'use strict';
 
 module.exports = function stars() {
-	for (var i = 0; i < 128; i++) {
+	for (var i = 0; i < 50; i++) {
 		var star = document.createElement('div');
 		star.className = 'star';
 		document.getElementById('starWrap').appendChild(star);
