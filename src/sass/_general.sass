@@ -45,5 +45,48 @@ img
 	vertical-align: middle
 	border: none
 
+
+strong
+	font-weight: 900
+	color: $strongColor
 .fa
 	font-size: 4rem
+
+.circle
+	width: 209px
+	height: 209px
+	border-radius: 50%
+	box-shadow: 0 5px 5px #d6d6d6
+
+.post
+	margin-bottom: 90px
+	display: flex
+	align-items: center
+	&:nth-of-type(even)
+		.post-img
+			order: 2
+		.post-txt
+			order: 1
+			padding-right: 25px
+	
+	&:last-of-type
+		margin-bottom: 6rem	
+	&-txt
+		padding-left: 25px
+		width: 70%
+		flex: 1 0 auto
+	& .fa-heart
+		color: lightcoral
+	& .fa
+		font-size: 8rem
+
+.download
+	border-radius: 5px
+	padding-top: 10px
+	padding-bottom: 10px
+	display: inline-block
+	background-color: black
+	color: white
+	padding: 10px 20px
+	margin-top: 20px
+	text-decoration: none

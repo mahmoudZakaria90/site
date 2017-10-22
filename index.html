@@ -35,18 +35,16 @@
   </head>
   <body>
   
-    <header class="header"><!--start of header-->
+    <header class="header" id="home"><!--start of header-->
 
-      <div class="star-wrap" id="starWrap"></div>
 
       <nav class="header-nav-wrap" id="headerNavWrap">
         <ul class="header-nav" id="headerNav">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#who">Who am I</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li class="header-download"><a href="public/files/resume.pdf" download>Download Resume</a></li>
+          <li><a href="#home" data-nav="Home"></a></li>
+          <li><a href="#who" data-nav="About"></a></li>
+          <li><a href="#skills" data-nav="Skills"></a></li>
+          <li><a href="#portfolio" data-nav="portfolio"></a></li>
+          <li><a href="#contact" data-nav="Contact"></a></li>
         </ul>
       </nav>
 
@@ -66,6 +64,7 @@
       <div class="header-scroll">
         <button class="header-scroll-btn"></button>
       </div>
+      <div class="star-wrap" id="starWrap"></div>
     </header><!--end of header-->
 
     <!--==============content Goes here==============================-->
@@ -75,10 +74,59 @@
             <div class="section-header">
               <h1 class="section-title">Who am I</h1>
             </div>
-            <article class="who-post">
-              <div class="who-img"></div>
-              <div class="who-txt"></div>
+            <article class="post who-post clf">
+              <div class="post-img who-img circle"></div>
+              <div class="post-txt who-txt">Full name is <strong>Mahmoud Mohamed Zakaria</strong> and from Cairo, Egypt. <br> I'm a front-end developer currently <a href="https://www.mondiamedia.com/" target="_blank"><strong>@Mondia Media</strong></a> a multinational company for digital entertainment. I've been coding and building websites/apps for 4 years.<p><a href="public/files/resume.pdf" download class="download">Download Resume</a></p></div>
             </article>
+
+            <article class="post code-post clf">
+              <div class="post-img code-img circle">
+                <div class="fa fa-heart"></div>
+              </div>
+              <div class="post-txt code-txt">
+                <strong style="color: lightcoral;font-size: 25px; margin-right: 5px">Passionate</strong>  about Coding and anything related to the web industry, I enjoy creating Real-world environment that fits and matches the user's expected needs as I feel myself that I have a big role in making the world happier by humanizing the web and make it more simple.
+              </div>
+            </article>
+
+            <article class="post code-post clf">
+              <div class="post-img code-img circle">
+                <div class="fa fa-star"></div>
+              </div>
+              <div class="post-txt code-txt">
+                <strong>My Favs</strong> Movies/games theme music, Harry Potter, Cardio, Traveling, Monique kessous "Jazz singer" 
+              </div>
+            </article>
+          </div>
+          <div class="section-sep"></div>
+        </section>
+
+        <section id="skills" class="skills section">
+          <div class="container">
+            <div class="section-header gv-al-cnt gv-mg-bt">
+              <h1 class="section-title">Skills</h1>
+              <p class="gv-mg-bt-lg"><strong>HTML, CSS and Javascript</strong> are my profession, writing Vanilla Javascript makes me feel that "I own the Universe!". In fact I met <strong>Angular, React and Vue</strong> and created some apps using them, but these days I'm digging into <strong>Vue</strong>.</p>
+              <div class="skills-container">
+                <img src="public/img/html.svg" alt="">
+                <img src="public/img/css.svg" alt="">
+                <img src="public/img/js.png" alt="">
+                <img src="public/img/jQurery.gif" alt="">
+                <img src="public/img/sass.svg" alt="">
+                <img src="public/img/node.png" alt="" style="width: 75px">
+                <img src="public/img/gulp.png" alt="" style="width: 35px">
+                <img src="public/img/grunt.png" alt="">
+                <img src="public/img/git.png" alt="">
+                <img src="public/img/ng.png" alt="">
+                <img src="public/img/vue.png" alt="">
+                <img src="public/img/babel.png" alt="">
+                <img src="public/img/brow.png" alt="" style="width: 75px">
+                <img src="public/img/roll.png" alt="" style="width: 35px">
+                <img src="public/img/wp.png" alt="">
+                <img src="public/img/pug.png" alt="">
+                <img src="public/img/browS.png" alt="">
+                <img src="public/img/jek.png" alt="">
+                <img src="public/img/mus.svg" alt="">
+              </div>
+            </div>
           </div>
         </section>
      </main>

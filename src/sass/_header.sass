@@ -63,39 +63,46 @@
 	&-nav
 		text-align: right
 		position: relative
-		padding: 30px 25px 15px
+		padding: 0 40px 0px 0
 		transition: all 450ms
 		&-wrap
 			z-index: 5
 			transition: all 450ms
 			position: fixed
 			top: 0
-			left: 0
 			right: 0
-			&.is-fixed
-				background-color: white
-				border-bottom: 1px solid $second-color
-				.header-nav
-					padding-top: 15px
-					& li a
-						color: $main-color
-					& li.header-download a
-						background-color: black
-						color: white
-
+			bottom: 0
+			display: flex
+			align-items: center
 		& li
-			display: inline-block
+			display: block
+			margin-bottom: 20px
+			&:last-of-type
+				margin-bottom: 0
 			& a
 				display: block
-				padding: 6px 20px
+				position: relative
+				width: 15px
+				height: 15px
+				background-color: white
+				border-radius: 50%
 				text-decoration: none
-			&.header-download
-				& a
-					background-color: white
-					color: black
-					border-radius: 5px
-					padding-top: 10px
-					padding-bottom: 10px
+				box-shadow: 0 1px 4px $main-color
+				&:hover:before
+					opacity: 1
+				&:before
+					content: attr(data-nav)
+					position: absolute
+					left: -100px
+					top: -10px
+					opacity: 0
+					padding: 3px 10px
+					background-color: $second-color
+					border-radius: 3px
+					transition: all 450ms
+
+			
+					
 
 	&-scroll
 		position: absolute
