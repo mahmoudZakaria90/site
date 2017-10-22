@@ -1,2 +1,101 @@
 @import mixins/valueMixins
 @import mixins/selectorMixins
+
+=slider-semi-h()
+	$base: 4
+	.indicator-btn2:first-of-type:checked ~ .indicator-wrap2 .indicator:first-of-type
+		cursor: default
+		background-color: $strongColor
+	
+	.indicator-wrap2 
+		position: absolute
+		bottom: -13px
+		right: 0
+		top: auto
+		left: 0
+		text-align: center
+		.indicator
+			display: inline-block
+			margin-right: 1.5rem
+			margin-bottom: 0
+			&:last-of-type
+				margin-right: 0
+			&:before
+				content: none
+		
+	@for $i from 2 to $base
+		.indicator-btn2:nth-of-type(#{$i}):checked
+			& ~ .achv-slider .achv-inner,& ~ .skills-slider .skills-slider-inner
+				transform: translateX(-($i - 1) * 100%)
+
+			& ~ .indicator-wrap2 .indicator:nth-of-type(#{$i})
+				cursor: default
+				background-color: $strongColor
+		.indicator-btn2:nth-of-type(#{$base}):checked 
+			& ~ .achv-slider .achv-inner,& ~ .skills-slider .skills-slider-inner
+				transform: translateX(-($base - 1) * 100%)
+			& ~ .indicator-wrap2 .indicator:nth-of-type(#{$base})
+				cursor: default
+				background-color: $strongColor
+
+.achv
+	&-slider
+		overflow: hidden
+		margin-bottom: 3rem
+	&-inner
+		transition: all 450ms
+
+	&-slide
+		flex-basis: 100%
+		.row
+			margin: 0
+
+	&-item
+		&.gv-4
+			padding: 0
+		&-inner
+			height: 222px
+			position: relative
+			display: block
+			transition: all 450ms
+			background-size: 200%
+			background-repeat: no-repeat
+			background-position: center center
+			box-shadow: 0 0 1px rgba(0,0,0,0)
+			transform: translateZ(0)
+			&:hover
+				background-size: 240%
+			&:hover h3
+				opacity: 1
+
+		h3
+			font-family: $main-face
+			background-color: rgba(#111, .85)
+			position: absolute
+			bottom: 0
+			left: 0
+			right: 0
+			top: 0
+			display: flex
+			flex-direction: column
+			justify-content: center
+			align-items: center
+			margin-bottom: 0
+			opacity: 0
+			color: white
+			text-decoration: none
+			transition: all 450ms
+			span
+				font-size: $h5
+				color: #a0a0a0
+				display: block
+
+.indicator
+	width: 10px
+	height: 10px
+	background-color: white
+	border-radius: 50%
+	position: relative
+	cursor: pointer
+
++slider-semi-h()
