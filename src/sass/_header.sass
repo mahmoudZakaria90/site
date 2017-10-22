@@ -82,24 +82,24 @@
 			& a
 				display: block
 				position: relative
-				width: 15px
-				height: 15px
+				width: 10px
+				height: 10px
 				background-color: white
 				border-radius: 50%
 				text-decoration: none
 				box-shadow: 0 1px 4px $main-color
 				&:hover:before
 					opacity: 1
-				// &:before
-				// 	content: attr(data-nav)
-				// 	position: absolute
-				// 	left: -100px
-				// 	top: -10px
-				// 	opacity: 0
-				// 	padding: 3px 10px
-				// 	background-color: $second-color
-				// 	border-radius: 3px
-				// 	transition: all 450ms
+				&:before
+					content: attr(data-nav)
+					position: absolute
+					left: -150px
+					top: -10px
+					opacity: 0
+					padding: 5px 15px
+					background-color: $strongColor
+					border-radius: 3px
+					transition: all 450ms
 
 			
 					
