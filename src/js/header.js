@@ -6,7 +6,7 @@ module.exports = {
 		'Making noises in user interfaces',
 		'Knowledge has no limit',
 		'If you can believe, you can achieve',
-		'For hiring, m.zakria90@gmail.com'
+		'For hiring, <a href="mailto:m.zakria90@gmail.com">m.zakria90@gmail.com</a>'
 		]
 
 		function init(){

@@ -74,3 +74,98 @@
 		padding-left: 5rem
 		&:before
 			left: 15px
+
+
+.history
+	&-post
+		margin: 3rem 0
+		display: flex
+		align-items: center
+		float: left
+		width: 50%
+		padding: 0 1.5rem
+		&:nth-last-of-type(1), &:nth-last-of-type(2)
+			margin-bottom: 0
+	&-month
+		color: $strongColor
+	&-txt
+		font-size: 1.8rem
+	&-date
+		width: 11rem
+		float: left
+		position: relative
+		&:before
+			content: ''
+			position: absolute
+			left: 50%
+			top: 0%
+			bottom: 0%
+			transform: translateX(-50%) rotate(76deg)
+			border: 1px dashed $whoSection
+		p
+			margin-bottom: 0
+			font-size: 3rem
+			text-align: center
+			&:last-child
+				text-align: right
+
+	h3
+		font-size: 2rem
+
+@media(max-width: 768px)
+	.achv
+		&-inner.gv-flex
+			display: block
+		&-item
+			width: auto
+			float: none
+			margin-bottom: 3rem
+			&-inner
+				height: 400px
+	.indicator-wrap2
+		display: none
+
+	.history
+		&-post
+			width: auto
+			float: none
+
+@media (max-width: 480px)
+	.section
+		&-title
+			font-size: 4.4rem
+			padding-right: 0
+			display: block
+			text-align: center
+			&:before
+				left: 15px
+		&-sep
+			margin: 0 auto 30px
+	.post
+		display: block
+		margin-bottom: 40px
+		&-txt
+			width: auto
+			padding: 0
+			text-align: center
+	.who
+		&-img
+			margin: 0 auto 2.5rem
+		&-txt
+			width: auto
+			padding-left: 0
+		.section-title
+			margin-bottom: 30px
+
+	.circle
+		margin: 0 auto 2.5rem
+
+	.skills
+		.section-title
+			padding-left: 0
+		&-container
+			width: 100%
+
+	.port
+		.section-title
+			padding-left: 0
