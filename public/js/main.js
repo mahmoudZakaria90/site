@@ -10264,7 +10264,7 @@ module.exports = {
 		function init() {
 			el.innerHTML = '<span class="show">' + data[0] + '</span>';
 			for (var i = 1; i < data.length; i++) {
-				var temp = '<span>' + data[i] + '</span>';
+				var temp = '<span style="z-index: ' + i + '">' + data[i] + '</span>';
 				el.innerHTML += temp;
 			}
 		}
