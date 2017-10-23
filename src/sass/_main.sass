@@ -65,9 +65,12 @@
 .port
 	color: white
 	background-color: black
-	background-image: url('../img/sep.png')
-	background-repeat: repeat-x
-	background-position: top left
-	padding-top: 9rem
+	background-image: url('../img/sep.png'), url('../img/sep2.png')
+	background-repeat: repeat-x, repeat-x
+	background-position: top left, bottom, left
+	padding: 6rem 0
 	& .section-title
 		color: white
+		padding-left: 5rem
+		&:before
+			left: 15px

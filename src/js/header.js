@@ -5,7 +5,8 @@ module.exports = {
 		'Talented, Innovator and a Seeker in the web industry',
 		'Making noises in user interfaces',
 		'Knowledge has no limit',
-		'If you can believe, you can achieve'
+		'If you can believe, you can achieve',
+		'For hiring, m.zakria90@gmail.com'
 		]
 
 		function init(){
