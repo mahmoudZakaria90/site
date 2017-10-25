@@ -10325,6 +10325,8 @@ module.exports = function scroll() {
 		// On-page links
 		if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
 			// Figure out element to scroll to
+			$('a[href*="#"]').removeClass('active');
+			$(this).addClass('active');
 			var target = $(this.hash);
 			target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
 			// Does a scroll target exist?
