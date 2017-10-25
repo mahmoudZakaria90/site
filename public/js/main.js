@@ -10259,7 +10259,7 @@ return jQuery;
 module.exports = {
 	headerTextSlider: function headerTextSlider() {
 		var el = document.querySelector('#headerTextSlider');
-		var data = ['Talented, Innovator and a Seeker in the web industry', 'Making noises in user interfaces', 'Knowledge has no limit', 'If you can believe, you can achieve', 'For hiring, <a href="mailto:m.zakria90@gmail.com">m.zakria90@gmail.com</a>'];
+		var data = ['Talented, Innovator and a Seeker in the web industry', 'Making noises in user interfaces', 'Knowledge has no limit', 'If you can believe, you can achieve', 'For hiring, <a href="mailto:zk@the-zek.com">zk@the-zek.com</a>'];
 
 		function init() {
 			el.innerHTML = '<span class="show">' + data[0] + '</span>';
