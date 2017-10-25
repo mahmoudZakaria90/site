@@ -41,7 +41,7 @@
 .achv
 	&-slider
 		overflow: hidden
-		margin-bottom: 3rem
+		margin-bottom: 8rem
 	&-inner
 		transition: all 450ms
 
@@ -54,17 +54,21 @@
 		&.gv-4
 			padding: 0
 		&-inner
-			height: 222px
 			position: relative
 			display: block
-			transition: all 450ms
 			background-size: 200%
 			background-repeat: no-repeat
 			background-position: center center
 			box-shadow: 0 0 1px rgba(0,0,0,0)
+			overflow: hidden
 			transform: translateZ(0)
+			img
+				transition: all 450ms
+				transform: scale(1.1)
+				height: 171px
 			&:hover
-				background-size: 240%
+				img
+					transform: scale(1.3)
 			&:hover h3
 				opacity: 1
 

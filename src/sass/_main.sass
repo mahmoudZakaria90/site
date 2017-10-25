@@ -2,7 +2,7 @@
 .section
 	padding: 4rem 0
 	&-sep
-		margin: 30px auto
+		margin: 30px auto 0
 		width: 30%
 		border-top: 1px solid $second-color
 		position: relative
@@ -73,6 +73,8 @@
 	& .section-title
 		color: white
 		padding-left: 5rem
+		& + p
+			margin-bottom: 6rem
 		&:before
 			left: 15px
 
@@ -142,8 +144,7 @@
 			text-align: center
 			&:before
 				left: 15px
-		&-sep
-			margin: 0 auto 30px
+		
 	.post
 		display: block
 		margin-bottom: 40px
