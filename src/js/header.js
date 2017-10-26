@@ -4,8 +4,6 @@ module.exports = {
 		let data = [
 		'Talented, Innovator and a Seeker in the web industry',
 		'Making noises in user interfaces',
-		'Knowledge has no limit',
-		'If you can believe, you can achieve',
 		'For hiring, <a href="mailto:zk@the-zek.com">zk@the-zek.com</a>'
 		]
 
