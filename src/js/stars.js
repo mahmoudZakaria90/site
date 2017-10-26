@@ -11,12 +11,5 @@ module.exports = function stars() {
 		star.style.left = rand2 + 'px'
 		star.style.animationDelay = (rand / i) / 20 + 's'
 		star.style.borderColor = colors[rand3]
-	}
-	window.addEventListener('scroll', function(){
-		if(window.pageYOffset >= document.getElementById('home').offsetHeight / 1.5){
-			document.getElementById('starWrap').style.display = 'none';
-		} else {
-			document.getElementById('starWrap').style.display = 'block'
-		}
-	})
+	}	
 }
