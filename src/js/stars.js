@@ -1,6 +1,6 @@
 module.exports = function stars() {
 	let colors = ['#40FFDC','#00A9D4','#1C3166','#240047','#1C0021','#40FFDC','#00A9D4','#1C3166']
-	for (var i = 0; i < 50 ; i++) {
+	for (var i = 0; i < 90 ; i++) {
 		let star = document.createElement('div');
 		star.className = 'star';
 		document.getElementById('starWrap').appendChild(star);

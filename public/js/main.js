@@ -10299,7 +10299,7 @@ var stars = require('./stars.js');
 var scroll = require('./scroll.js');
 
 window.addEventListener('DOMContentLoaded', function () {
-	stars();
+	// stars();
 	scroll();
 	header.headerTextSlider();
 	header.headerNav();
@@ -10350,7 +10350,7 @@ module.exports = function scroll() {
 
 module.exports = function stars() {
 	var colors = ['#40FFDC', '#00A9D4', '#1C3166', '#240047', '#1C0021', '#40FFDC', '#00A9D4', '#1C3166'];
-	for (var i = 0; i < 50; i++) {
+	for (var i = 0; i < 90; i++) {
 		var star = document.createElement('div');
 		star.className = 'star';
 		document.getElementById('starWrap').appendChild(star);
