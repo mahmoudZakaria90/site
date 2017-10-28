@@ -10286,16 +10286,8 @@ module.exports = {
 		slide();
 	},
 	headerNav: function headerNav() {
-		var el = document.getElementById('headerNavWrap');
-		function fixedBar() {
-			if (window.pageYOffset >= el.offsetHeight) {
-				el.classList.add('is-fixed');
-			} else if (window.pageYOffset <= 0) {
-				el.classList.remove('is-fixed');
-			}
-		}
-
-		window.addEventListener('scroll', fixedBar);
+		var section = document.getElementsByClassName('section');
+		var navItems = document.querySelectorAll('[data-nav]');
 	}
 };
 

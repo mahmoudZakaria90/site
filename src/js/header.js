@@ -32,15 +32,7 @@ module.exports = {
 		slide();
 	},
 	headerNav() {
-		let el = document.getElementById('headerNavWrap');
-		function fixedBar() {
-			if(window.pageYOffset >= el.offsetHeight){
-				el.classList.add('is-fixed');
-			} else if (window.pageYOffset <= 0){
-				el.classList.remove('is-fixed');
-			}
-		}
-
-		window.addEventListener('scroll', fixedBar)
+		let section = document.getElementsByClassName('section');
+		let navItems = document.querySelectorAll('[data-nav]');
 	}
 }
