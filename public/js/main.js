@@ -10299,7 +10299,7 @@ var stars = require('./stars.js');
 var scroll = require('./scroll.js');
 
 window.addEventListener('DOMContentLoaded', function () {
-	// stars();
+	stars();
 	scroll();
 	header.headerTextSlider();
 	header.headerNav();
