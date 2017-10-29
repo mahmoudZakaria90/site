@@ -3,7 +3,7 @@ module.exports = {
 		let el = document.querySelector('#headerTextSlider');
 		let data = [
 		'Talented, Innovator and a Seeker in the web industry',
-		'Making noises in user interfaces',
+		'Someone who makes noises in user interfaces',
 		'For hiring, <a href="mailto:zk@the-zek.com">zk@the-zek.com</a>'
 		]
 
