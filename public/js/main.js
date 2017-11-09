@@ -10297,15 +10297,49 @@ module.exports = {
 var header = require('./header.js');
 var stars = require('./stars.js');
 var scroll = require('./scroll.js');
+var showPotter = require('./potter.js');
 
 window.addEventListener('DOMContentLoaded', function () {
 	stars();
 	scroll();
 	header.headerTextSlider();
 	header.headerNav();
+	document.getElementById('showPotter').onclick = showPotter;
 });
 
-},{"./header.js":2,"./scroll.js":4,"./stars.js":5}],4:[function(require,module,exports){
+},{"./header.js":2,"./potter.js":4,"./scroll.js":5,"./stars.js":6}],4:[function(require,module,exports){
+'use strict';
+
+module.exports = function init(e) {
+	var el = document.getElementById('potter');
+	function coords(e) {
+		var xAxis = e.clientX - el.offsetWidth / 2;
+		var yAxis = e.clientY - el.offsetHeight / 2;
+		el.style.top = yAxis + 'px';
+		el.style.left = xAxis + 'px';
+	}
+	function revealPotter() {
+		coords(e);
+		el.style.zIndex = 4;
+		setTimeout(function () {
+			el.style.opacity = 1;
+			document.body.className += ' potterme';
+		}, 1000);
+	}
+
+	function hidePotter() {
+		el.style.opacity = 0;
+		setTimeout(function () {
+			el.style.zIndex = 0;
+			document.body.classList.remove('potterme');
+		}, 1000);
+	}
+	revealPotter();
+	window.addEventListener('mousemove', coords);
+	setTimeout(hidePotter, 6000);
+};
+
+},{}],5:[function(require,module,exports){
 'use strict';
 
 var $ = require('jquery');
@@ -10345,7 +10379,7 @@ module.exports = function scroll() {
 	});
 };
 
-},{"jquery":1}],5:[function(require,module,exports){
+},{"jquery":1}],6:[function(require,module,exports){
 'use strict';
 
 module.exports = function stars() {
