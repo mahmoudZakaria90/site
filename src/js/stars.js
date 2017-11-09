@@ -4,8 +4,12 @@ module.exports = function stars() {
 		let star = document.createElement('div');
 		star.className = 'star';
 		document.getElementById('starWrap').appendChild(star);
-		let rand = Math.floor(Math.random() * window.innerWidth)
-		let rand2 = Math.floor(Math.random() * window.innerWidth)
+		let rand = Math.floor(Math.random() * window.innerWidth);
+		let rand2 = Math.floor(Math.random() * window.innerWidth);
+		if(window.innerWidth <= 480) {
+			rand = Math.floor(Math.random() * window.innerHeight);
+			rand2 = Math.floor(Math.random() * window.innerHeight);
+		}
 		let rand3 = Math.floor(Math.random() * colors.length)
 		star.style.top = rand + 'px'
 		star.style.left = rand2 + 'px'

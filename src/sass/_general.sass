@@ -84,6 +84,17 @@ strong
 		font-size: 8rem
 	& .fa-star
 		color: #4caac8
+	@media (min-width: 320px) and (max-width: 640px)
+		&
+			display: block
+			margin-bottom: 60px
+			&-img, &-txt
+				float: left
+			&-txt
+				width: 60%
+			&:nth-of-type(even)
+				.post-img
+					float: right
 
 .download
 	border-radius: 5px

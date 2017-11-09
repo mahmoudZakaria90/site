@@ -10390,6 +10390,10 @@ module.exports = function stars() {
 		document.getElementById('starWrap').appendChild(star);
 		var rand = Math.floor(Math.random() * window.innerWidth);
 		var rand2 = Math.floor(Math.random() * window.innerWidth);
+		if (window.innerWidth <= 480) {
+			rand = Math.floor(Math.random() * window.innerHeight);
+			rand2 = Math.floor(Math.random() * window.innerHeight);
+		}
 		var rand3 = Math.floor(Math.random() * colors.length);
 		star.style.top = rand + 'px';
 		star.style.left = rand2 + 'px';
