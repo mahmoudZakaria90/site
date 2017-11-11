@@ -10294,20 +10294,22 @@ module.exports = {
 },{}],3:[function(require,module,exports){
 'use strict';
 
-var header = require('./header.js');
-var stars = require('./stars.js');
-var scroll = require('./scroll.js');
-var showPotter = require('./potter.js');
+var header = require('./header');
+var stars = require('./stars');
+var scroll = require('./scroll');
+var showPotter = require('./potter');
 
 window.addEventListener('DOMContentLoaded', function () {
 	stars();
-	scroll();
+	scroll.scroll();
 	header.headerTextSlider();
 	header.headerNav();
 	document.getElementById('showPotter').onclick = showPotter;
 });
 
-},{"./header.js":2,"./potter.js":4,"./scroll.js":5,"./stars.js":6}],4:[function(require,module,exports){
+window.addEventListener('scroll', scroll.up);
+
+},{"./header":2,"./potter":4,"./scroll":5,"./stars":6}],4:[function(require,module,exports){
 'use strict';
 
 module.exports = function init(e) {
@@ -10343,40 +10345,51 @@ module.exports = function init(e) {
 'use strict';
 
 var $ = require('jquery');
-module.exports = function scroll() {
-	// Select all links with hashes
-	$('a[href*="#"]')
-	// Remove links that don't actually link to anything
-	.not('[href="#"]').not('[href="#0"]').click(function (event) {
-		// On-page links
-		if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-			// Figure out element to scroll to
-			$('a[href*="#"]').removeClass('active');
-			$(this).addClass('active');
-			var target = $(this.hash);
-			target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-			// Does a scroll target exist?
-			if (target.length) {
-				// Only prevent default if animation is actually gonna happen
-				event.preventDefault();
-				$('html, body').animate({
-					scrollTop: target.offset().top
-				}, 1000, function () {
-					// Callback after animation
-					// Must change focus!
-					var $target = $(target);
-					$target.focus();
-					if ($target.is(":focus")) {
-						// Checking if the target was focused
-						return false;
-					} else {
-						$target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
-						$target.focus(); // Set focus again
-					};
-				});
+module.exports = {
+	scroll: function scroll() {
+		// Select all links with hashes
+		$('a[href*="#"]')
+		// Remove links that don't actually link to anything
+		.not('[href="#"]').not('[href="#0"]').click(function (event) {
+			// On-page links
+			if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+				// Figure out element to scroll to
+				$('a[href*="#"]').removeClass('active');
+				$(this).addClass('active');
+				var target = $(this.hash);
+				target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+				// Does a scroll target exist?
+				if (target.length) {
+					// Only prevent default if animation is actually gonna happen
+					event.preventDefault();
+					$('html, body').animate({
+						scrollTop: target.offset().top
+					}, 1000, function () {
+						// Callback after animation
+						// Must change focus!
+						var $target = $(target);
+						$target.focus();
+						if ($target.is(":focus")) {
+							// Checking if the target was focused
+							return false;
+						} else {
+							$target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
+							$target.focus(); // Set focus again
+						};
+					});
+				}
 			}
+		});
+	},
+	up: function up() {
+		var main = document.querySelector('main');
+		var upItem = document.getElementById('up');
+		if (window.pageYOffset >= main.offsetTop) {
+			upItem.classList.add('active');
+		} else {
+			upItem.classList.remove('active');
 		}
-	});
+	}
 };
 
 },{"jquery":1}],6:[function(require,module,exports){

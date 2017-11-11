@@ -1,12 +1,14 @@
-var header = require('./header.js');
-var stars = require('./stars.js');
-var scroll = require('./scroll.js');
-var showPotter = require('./potter.js');
+var header = require('./header');
+var stars = require('./stars');
+var scroll = require('./scroll');
+var showPotter = require('./potter');
 
 window.addEventListener('DOMContentLoaded', function(){
 	stars();
-	scroll()
+	scroll.scroll()
 	header.headerTextSlider();
 	header.headerNav();
 	document.getElementById('showPotter').onclick = showPotter
 });
+
+window.addEventListener('scroll', scroll.up)
