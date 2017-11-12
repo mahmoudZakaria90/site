@@ -21,6 +21,7 @@ module.exports = function init(e) {
 			el.style.zIndex = 0
 			document.body.classList.remove('potterme');
 		}, 1000)
+		window.removeEventListener('mousemove', coords);
 	}
 	revealPotter();
 	window.addEventListener('mousemove', coords);
