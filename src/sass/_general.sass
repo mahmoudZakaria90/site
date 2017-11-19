@@ -131,3 +131,47 @@ strong
 			right: 15px
 			background-color: $strongColor
 			border-radius: 50%
+
+/*equalizer*/
+.equalizer
+	position: fixed
+	z-index: 99999
+	bottom: 10px
+	left: 20px
+.sound-bars
+	text-align: center
+
+.sound-bar
+	display: inline-block
+	margin: 0 0px
+	height: 20px
+	width: 4px
+	background-color: $strongColor
+	border-radius: 2px
+	transform-origin: bottom
+	animation: sounbars infinite alternate linear
+
+
+.sound-bar:first-child
+	transform: scaleY(.2)
+	animation-duration: 200ms
+
+.sound-bar:nth-child(2)
+	transform: scaleY(.8)
+	animation-duration: 350ms
+
+
+.sound-bar:nth-child(3)
+	transform: scaleY(.5)
+	animation-duration: 300ms
+
+
+.sound-bar:nth-child(4)
+	transform: scaleY(.1)
+	animation-duration: 250ms
+
+@keyframes sounbars
+	to
+		transform: scaleY(1)
+
+  
