@@ -32,7 +32,22 @@ module.exports = {
 		slide();
 	},
 	headerNav() {
-		let section = document.getElementsByClassName('section');
-		let navItems = document.querySelectorAll('[data-nav]');
+		let header = document.getElementById('home');
+		let headerNav = document.getElementById('headerNavWrap');
+		if(window.pageYOffset >= header.offsetHeight){
+			headerNav.classList.add('fixed');
+		} else {
+			headerNav.classList.remove('fixed');
+		}
+	},
+	headerScroll() {
+		let section = document.querySelectorAll('.section');
+		for (var i = 0; i < section.length; i++) {
+			window.onscroll = function(){
+				if(window.pageYOffset >= section[i].offsetHeight){
+					alert(section[i].id)
+				}
+			}
+		}
 	}
 }

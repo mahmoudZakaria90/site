@@ -34,29 +34,22 @@
 
   </head>
   <body>
-    <div class="potter" id="potter"></div>
-    <div class="equalizer">
-      <div class="sound-bars">
-      <div class="sound-bar "></div>
-      <div class="sound-bar "></div>
-      <div class="sound-bar "></div>
-      <div class="sound-bar "></div>
-    </div>
-    </div>
+
+    <div class="potter" id="potter"></div><!--extras-->
+    <a href="#home" class="fa fa-hand-o-up up" id="up"></a><!--extras-->
+
     <header class="header" id="home"><!--start of header-->
-      <nav class="header-nav-wrap" id="headerNavWrap">
+      <nav class="header-nav-wrap" id="headerNavWrap"><!--start of nav-->
         <ul class="header-nav" id="headerNav">
-          <li><a href="#home" data-nav="Home" title="Home" class="active"></a></li>
-          <li><a href="#who" data-nav="About" title="About"></a></li>
-          <li><a href="#skills" data-nav="Skills" title="Skills"></a></li>
-          <li><a href="#portfolio" data-nav="Portfolio" title="Portfolio"></a></li>
-          <li><a href="#experience" data-nav="Experience" title="Experience"></a></li>
+          <li><a href="#home" data-nav="Home" title="Home" class="active">Home</a></li>
+          <li><a href="#who" data-nav="Who" title="About">Who am I</a></li>
+          <li><a href="#skills" data-nav="Skills" title="Skills">Skills</a></li>
+          <li><a href="#portfolio" data-nav="Portfolio" title="Portfolio">Portfolio</a></li>
+          <li><a href="#experience" data-nav="Experience" title="Experience">Experience</a></li>
         </ul>
-      </nav>
+      </nav> <!--end of nav-->
 
-      <!-- <div class="header-bg"></div> -->
-
-      <div class="header-text">
+      <div class="header-text"><!--start of header text slider-->
         <h1 class="header-title">The Zek</h1>
         <p class="header-text-slider" id="headerTextSlider"></p>
         <ul class="header-social">
@@ -65,28 +58,30 @@
           <li><a target="_blank" href="http://codepen.io/Mahmoud-Zakaria/" class="fa fa-codepen"></a></li>
           <li><a target="_blank" href="https://www.linkedin.com/in/mahmoud-zakaria-04454599" class="fa fa-linkedin"></a></li>
         </ul>
-      </div>
+      </div><!--end of header text slider-->
 
-      <div class="header-scroll">
+      <div class="header-scroll"><!--start of header scroll-->
         <div class="header-scroll-btn"></div>
-      </div>
-      <div class="star-wrap" id="starWrap"></div>
+      </div><!--end of header scroll-->
+
+      <div class="star-wrap" id="starWrap"></div><!--extras(stars)-->
+
     </header><!--end of header-->
 
     <!--==============content Goes here==============================-->
-     <main class="main">
-        <section class="who section" id="who">
+     <main class="main"><!--start of main-->
+        <section class="who section gv-bg-gray" id="who">
           <div class="container">
             <div class="section-header">
               <h1 class="section-title">Who am I</h1>
             </div>
             <article class="post who-post clf">
-              <div class="post-img who-img circle"></div>
-              <div class="post-txt who-txt">Full name is <strong>Mahmoud Mohamed Zakaria</strong> from Cairo, Egypt. <br> I'm a front-end developer currently <a href="https://www.mondiamedia.com/" target="_blank"><strong>@Mondia Media</strong></a> a multinational company for digital entertainment. I've been coding and building websites/apps for 4 years.<div><a href="public/files/resume.pdf" download class="download">Download Resume</a></div></div>
+              <div class="post-img who-img post-circle"></div>
+              <div class="post-txt who-txt">Full name is <strong>Mahmoud Mohamed Zakaria</strong> from Cairo, Egypt. <br> I'm a front-end developer currently <a href="https://www.mondiamedia.com/" target="_blank"><strong>@Mondia Media</strong></a> a multinational company for digital entertainment. I've been coding and building websites/apps for 4 years.<div><a href="public/files/resume.pdf" download class="gv-btn">Download Resume</a></div></div>
             </article>
 
             <article class="post code-post clf">
-              <div class="post-img code-img circle">
+              <div class="post-img code-img post-circle">
                 <div class="fa fa-heart"></div>
               </div>
               <div class="post-txt code-txt">
@@ -95,7 +90,7 @@
             </article>
 
             <article class="post code-post fav-post clf">
-              <div class="post-img code-img fav-post circle">
+              <div class="post-img code-img fav-post post-circle">
                 <div class="fa fa-star"></div>
               </div>
               <div class="post-txt code-txt fav-post">
@@ -106,13 +101,13 @@
           <div class="section-sep"></div>
         </section>
 
-        <section id="skills" class="skills section">
+        <section id="skills" class="skills section gv-bg-gray gv-al-cnt">
           <div class="container">
-            <div class="section-header gv-al-cnt gv-mg-bt">
+            <div class="section-header gv-mg-bt">
               <h1 class="section-title">Skills</h1>
-              <p class="gv-mg-bt-md"><strong>HTML, CSS and Javascript</strong> are my profession, writing Vanilla Javascript makes me feel that "I own the Universe!". <br>In fact I met <strong>Angular, React and Vue</strong> and created some apps using them, but these days I'm digging into <strong>Vue</strong>.</p>
+              <p class="gv-mg-bt-md"><strong>HTML, CSS and Javascript</strong> are my profession, writing Vanilla Javascript makes me feel that "I own the Universe!". <br>In face I has a little bit knowledge in <strong>Angular, React</strong> and created a few practical apps using them, but these days I'm digging into <strong>Vue</strong>.</p>
             </div>
-              <div class="skills-container">
+              <div class="skills-container ">
                 <img src="public/img/html.svg" alt="">
                 <img src="public/img/css.svg" alt="">
                 <img src="public/img/js.png" alt="">
@@ -123,7 +118,7 @@
                 <img src="public/img/gulp.png" alt="" style="width: 35px">
                 <img src="public/img/grunt.png" alt="" title="grunt">
                 <img src="public/img/git.png" alt="" title="git">
-                <img src="public/img/ng.png" alt="" title="Angular">
+                <!-- <img src="public/img/ng.png" alt="" title="Angular"> -->
                 <img src="public/img/vue.png" alt="" title="Vue.js">
                 <img src="public/img/babel.png" alt="">
                 <img src="public/img/brow.png" alt="" style="width: 75px">
@@ -137,18 +132,18 @@
             </div>
         </section>
 
-        <section id="portfolio" class="port section">
+        <section id="portfolio" class="port section gv-c-white"><!--start of portfolio-->
           <div class="container">
             <div class="section-header gv-al-cnt ">
-              <h1 class="section-title">Portfolio<p style="font-size: 20px;font-family: 'Titillium Web'">Projects I contributed in, most of them powered by <a href="http://diva-lab.com" target="_blank" class="gv-destory-underline"><strong style="text-decoration: underline;">Diva-lab</strong></a></p></h1>
+              <h1 class="section-title gv-c-white">Portfolio<p style="font-size: 20px;font-family: 'Titillium Web'">Projects I contributed in, most of them powered by <a href="http://diva-lab.com" target="_blank" class="gv-destory-underline"><strong style="text-decoration: underline;">Diva-lab</strong></a></p></h1>
 
               <p class="gv-mg-bt-md">After a visit in my portfolio I recommend to enter my <strong><a href="https://github.com/mahmoudZakaria90" target="_blank">Github</a></strong> profile to discover server-side apps created using <strong>Node.js, MongoDB, Socket.io </strong> and for the client-side I used <strong>React</strong>.</p>
             </div>
 
-            <input type="radio" name="achv" class="indicator-btn2" id="slide1" hidden checked><!--start of indicators-btns-->
-            <input type="radio" name="achv" class="indicator-btn2" id="slide2" hidden>
-            <input type="radio" name="achv" class="indicator-btn2" id="slide3" hidden>
-            <input type="radio" name="achv" class="indicator-btn2" id="slide4" hidden>
+            <input type="radio" name="port" class="indicator-btn2" id="slide1" hidden checked><!--start of indicators-btns-->
+            <input type="radio" name="port" class="indicator-btn2" id="slide2" hidden>
+            <input type="radio" name="port" class="indicator-btn2" id="slide3" hidden>
+            <input type="radio" name="port" class="indicator-btn2" id="slide4" hidden>
             <!--end of indicators-btns-->
             <div class="indicator-wrap2"><!--start of indicators-placeholder-->
               <label for="slide1" class="indicator"></label>
@@ -157,97 +152,92 @@
               <label for="slide4" class="indicator"></label>
               </div><!--end of indicators-placeholder-->
 
-              <div class="achv-slider">
-                <div class="achv-inner gv-flex gv-flex-grow">
-                  <div class="achv-slide achv-slide1">
-                    <div class="row clf">
-
-                      <div class="achv-item gv-4">
-                         <a href="http://www.diva-lab.com/" target="_blank" class="achv-item-inner">
+              <div class="port-slider"><!--start of slider-->
+                <div class="port-inner gv-flex gv-flex-grow"><!--start of sliderinner-->
+                  <div class="port-slide port-slide1"><!--start of slide-->
+                    <div class="row clf"><!--start of row-->
+                      <div class="port-item gv-4">
+                         <a href="http://www.diva-lab.com/" target="_blank" class="port-item-inner">
                           <img src="public/img/diva.png" alt="">
                           <h3>Diva-lab <span>Digital Solutions</span></h3>
                         </a>
                       </div>
 
-                      <div class="achv-item gv-4">
-                        <a href="https://www.zewailcity.edu.eg" target="_blank" class="achv-item-inner">
+                      <div class="port-item gv-4">
+                        <a href="https://www.zewailcity.edu.eg" target="_blank" class="port-item-inner">
                           <img src="public/img/zc.png" alt="">
                           <h3>Zewail city <span>Dr.Ahmed Zewail city site</span></h3>
                         </a>
                       </div>
 
-                      <div class="achv-item gv-4">
-                       <a href="http://nutritionplanet.info/main/index.php" target="_blank" class="achv-item-inner">
+                      <div class="port-item gv-4">
+                       <a href="http://nutritionplanet.info/main/index.php" target="_blank" class="port-item-inner">
                         <img src="public/img/nut.png" alt="">
                         <h3>Nutrition planet<span>Dr.Sherifa abo-elfotoh site</span></h3>
                       </a>
                      </div>
 
-                     <div class="achv-item gv-4">
-                       <a href="http://www.diva-lab.com/projects/hilton/index.php?lang=en" target="_blank" class="achv-item-inner">
+                     <div class="port-item gv-4">
+                       <a href="http://www.diva-lab.com/projects/hilton/index.php?lang=en" target="_blank" class="port-item-inner">
                         <img src="public/img/hilton.png" alt="">
                         <h3>Hilton Sharm Dreams <span>Hotel &amp; tourism</span></h3>
                        </a>
                      </div>
 
-                    <div class="achv-item gv-4">
-                     <a href="http://art-of-form.com/" target="_blank" class="achv-item-inner">
+                    <div class="port-item gv-4">
+                     <a href="http://art-of-form.com/" target="_blank" class="port-item-inner">
                       <img src="public/img/aof.png" alt="">
                       <h3>Art of form<span>Furniture</span></h3>
                     </a>
                     </div>
 
-
-                    <div class="achv-item gv-4">
-                       <a href="http://wajbety.com" target="_blank" class="achv-item-inner">
+                    <div class="port-item gv-4">
+                       <a href="http://wajbety.com" target="_blank" class="port-item-inner">
                         <img src="public/img/wajbty.png" alt="">
                         <h3>Wajbety <span>Online food ordering</span></h3>
                        </a>
                     </div>
+                  </div><!--end of row-->
+                </div><!--end of slide-->
 
-
-                  </div>
-                </div>
-
-                <div class="achv-slide achv-slide2">
+                <div class="port-slide port-slide2">
                   <div class="row clf">
-
-                    <div class="achv-item gv-4">
-                       <a href="http://road9online.com/index.php?lang=en" target="_blank" class="achv-item-inner">
+                    <div class="port-item gv-4">
+                       <a href="http://road9online.com/index.php?lang=en" target="_blank" class="port-item-inner">
                         <img src="public/img/road.png" alt="">
                         <h3>Road9 online <span>Real estate</span></h3>
                        </a>
                     </div>
 
-                    <div class="achv-item gv-4">
-                       <a href="http://mls-egypt.org/" target="_blank" class="achv-item-inner">
+                    <div class="port-item gv-4">
+                       <a href="http://mls-egypt.org/" target="_blank" class="port-item-inner">
                         <img src="public/img/mls.png" alt="">
                         <h3>MLS <span>Education</span></h3>
                        </a>
                     </div>
 
-                     <div class="achv-item gv-4">
-                        <a href="http://www.medicareegypt.com/index.php?lang=en" target="_blank" class="achv-item-inner">
+                     <div class="port-item gv-4">
+                        <a href="http://www.medicareegypt.com/index.php?lang=en" target="_blank" class="port-item-inner">
                           <img src="public/img/medi.png" alt="">
                           <h3>Medicare <span>Medical insurance</span></h3>
                         </a>
                       </div>
 
-                    <div class="achv-item gv-4">
-                      <a href="http://cairobeatsfm.com/" target="_blank" class="achv-item-inner">
+                    <div class="port-item gv-4">
+                      <a href="http://cairobeatsfm.com/" target="_blank" class="port-item-inner">
                         <img src="public/img/cb.png" alt="">
                         <h3>Cairo beats <span>Radio broadcasting</span></h3>
                       </a>
                     </div>
-                    <div class="achv-item gv-4">
-                      <a href="http://masterpiece-eg.com/main/index.php" target="_blank" class="achv-item-inner">
+                    <div class="port-item gv-4">
+                      <a href="http://masterpiece-eg.com/main/index.php" target="_blank" class="port-item-inner">
                         <img src="public/img/mmp.png" alt="">
                         <h3>Master master-piece <span>Engineering consultation</span></h3>
                       </a>
                     </div>
 
-                    <div class="achv-item gv-4">
-                       <a href="http://www.rodymar.com/" target="_blank" class="achv-item-inner">
+                    <div class="port-item gv-4">
+                       <a href="http://www.rodymar.com/" target="_blank" class="port-item-inner">
                         <img src="public/img/rody.png" alt="">
                         <h3>Rodymar <span>Shippings</span></h3>
                       </a>
@@ -257,76 +247,76 @@
                   </div>
                 </div>
 
-                <div class="achv-slide achv-slide3">
+                <div class="port-slide port-slide3">
                   <div class="row clf">
 
-                    <div class="achv-item gv-4">
-                      <a href="http://ciaas.ca/" target="_blank" class="achv-item-inner">
+                    <div class="port-item gv-4">
+                      <a href="http://ciaas.ca/" target="_blank" class="port-item-inner">
                         <img src="public/img/ciaas.png" alt="">
                         <h3>CIAAS <span>Advanced studies</span></h3>
                       </a>
                     </div>
 
-                    <div class="achv-item gv-4">
-                      <a href="https://3atayer.com/" target="_blank" class="achv-item-inner">
+                    <div class="port-item gv-4">
+                      <a href="https://3atayer.com/" target="_blank" class="port-item-inner">
                         <img src="public/img/3atayer.png" alt="">
                         <h3>3atayer <span>Online recharging</span></h3>
                       </a>
                     </div>
 
-                    <div class="achv-item gv-4">
-                      <a href="http://www.pplmx.com/eprogram/main/index.php?lang=en" target="_blank" class="achv-item-inner">
+                    <div class="port-item gv-4">
+                      <a href="http://www.pplmx.com/eprogram/main/index.php?lang=en" target="_blank" class="port-item-inner">
                         <img src="public/img/pplmx.png" alt="">
                         <h3>PPLMX <span>E-commerce</span></h3>
                       </a>
                     </div>
                   
-                  <div class="achv-item gv-4">
-                     <a href="http://dustour.org/main/index.php" target="_blank" class="achv-item-inner">
+                  <div class="port-item gv-4">
+                     <a href="http://dustour.org/main/index.php" target="_blank" class="port-item-inner">
                         <img src="public/img/dus.png" alt="">
                         <h3>Arab Organization for constitution</h3>
                     </a>
                   </div>
 
-                  <div class="achv-item gv-4">
-                    <a href="http://www.arab-afli.org/main/index.php" target="_blank" class="achv-item-inner">
+                  <div class="port-item gv-4">
+                    <a href="http://www.arab-afli.org/main/index.php" target="_blank" class="port-item-inner">
                       <img src="public/img/arab.png" alt="">
                       <h3>Arab-afli <span>Libraries &amp; Magazines</span></h3>
                     </a>
                   </div>
 
-                  <div class="achv-item gv-4">
-                    <a href="http://www.diva-lab.com/projects/newmotores/index.php?lang=en" target="_blank" class="achv-item-inner">
+                  <div class="port-item gv-4">
+                    <a href="http://www.diva-lab.com/projects/newmotores/index.php?lang=en" target="_blank" class="port-item-inner">
                       <img src="public/img/new.png" alt="">
                       <h3>New Motors <span> Agricultural Machinery</span></h3>
                     </a>
                   </div>
                   </div>
                 </div>
-                <div class="achv-slide achv-slide3">
+                <div class="port-slide port-slide3">
                   <div class="row clf">
                     
-                    <div class="achv-item gv-4">
-                      <a href="http://codepen.io/Mahmoud-Zakaria/" target="_blank" class="achv-item-inner">
+                    <div class="port-item gv-4">
+                      <a href="http://codepen.io/Mahmoud-Zakaria/" target="_blank" class="port-item-inner">
                         <img src="public/img/cp.png" alt="">
                         <h3>CodePen <span class="gv-block">My own pens, posts</span></h3>
                       </a>
                     </div>
 
-                    <div class="achv-item gv-4">
-                       <a href="https://mahmoudzakaria90.github.io/shortSnippets/public/" target="_blank" class="achv-item-inner">
+                    <div class="port-item gv-4">
+                       <a href="https://mahmoudzakaria90.github.io/shortSnippets/public/" target="_blank" class="port-item-inner">
                         <img src="public/img/ss.png" alt="">
                         <h3>ShortSnippets.css <span>Snippets, loaders, ...etc</span></h3>
                       </a>
                     </div>
-                    <div class="achv-item gv-4">
-                      <a href="https://mahmoudzakaria90.github.io/u-build/public/" target="_blank" class="achv-item-inner">
+                    <div class="port-item gv-4">
+                      <a href="https://mahmoudzakaria90.github.io/u-build/public/" target="_blank" class="port-item-inner">
                         <img src="public/img/u-build.png" alt="">
                        <h3>U-build.js <span>Javascript Builder</span></h3>
                       </a>
                     </div>
-                    <div class="achv-item gv-4">
-                        <a href="https://mahmoudzakaria90.github.io/assassinCode/public/" target="_blank" class="achv-item-inner">
+                    <div class="port-item gv-4">
+                        <a href="https://mahmoudzakaria90.github.io/assassinCode/public/" target="_blank" class="port-item-inner">
                           <img src="public/img/as.png" alt="">
                          <h3>Assassin's Code<span class="gv-block">Javascript API can make MAGIC</span></h3>
                         </a>
@@ -335,117 +325,121 @@
                 </div>
               </div>
             </div>
-          </div>
-        </section>
+          </div><!--end of container-->
+        </section><!--end of portfolio-->
 
-        <section class="exp section" id="experience">
-            <div class="container">
-              <div class="section-header">
+        <section class="exp section gv-bg-gray" id="experience"><!--start of Experience-->
+            <div class="container"><!--start of container-->
+              <div class="section-header"><!--start of section header-->
                 <h1 class="section-title">Past, Present me</h1>
-              </div>
-              <div class="row clf">
-                <article class="history-post clf"><!--start of history post-->
+              </div><!--end of section header-->
+              <div class="row clf"><!--start of row-->
+                <article class="exp-post clf"><!--start of exp post-->
 
-                  <div class="history-date">
-                    <p class="history-month">1</p>
-                    <p class="history-year">2017</p>
+                  <div class="exp-date">
+                    <p class="exp-month">1</p>
+                    <p class="exp-year">2017</p>
                   </div>
 
-                  <div class="history-txt gv-9">Front-End developer @<a href="https://www.mondiamedia.com/" target="_blank" class="gv-color-main"><strong>Mondia Media</strong></a></div>
+                  <div class="exp-txt gv-9">Front-End developer @<a href="https://www.mondiamedia.com/" target="_blank" class="gv-color-main"><strong>Mondia Media</strong></a></div>
 
-                </article><!--end of history post-->
+                </article><!--end of exp post-->
 
-                <article class="history-post clf"><!--start of history post-->
+                <article class="exp-post clf"><!--start of exp post-->
 
-                  <div class="history-date">
-                    <p class="history-month">12</p>
-                    <p class="history-year">2016</p>
+                  <div class="exp-date">
+                    <p class="exp-month">12</p>
+                    <p class="exp-year">2016</p>
                   </div>
 
-                  <div class="history-txt gv-9">Front-End developer @<a href="http://betahubs.com" target="_blank" class="gv-color-main"><strong>Betahubs</strong></a></div>
+                  <div class="exp-txt gv-9">Front-End developer @<a href="http://betahubs.com" target="_blank" class="gv-color-main"><strong>Betahubs</strong></a></div>
 
-                </article><!--end of history post-->
+                </article><!--end of exp post-->
                 
-                <article class="history-post clf"><!--start of history post-->
+                <article class="exp-post clf"><!--start of exp post-->
 
-                  <div class="history-date">
-                    <p class="history-month">9</p>
-                    <p class="history-year">2016</p>
+                  <div class="exp-date">
+                    <p class="exp-month">9</p>
+                    <p class="exp-year">2016</p>
                   </div>
 
-                  <div class="history-txt gv-9">Front-End developer @<a href="http://www.kite.agency" target="_blank" class="gv-color-main"><strong>Kite-agency</strong></a></div>
+                  <div class="exp-txt gv-9">Front-End developer @<a href="http://www.kite.agency" target="_blank" class="gv-color-main"><strong>Kite-agency</strong></a></div>
 
-                </article><!--end of history post-->
+                </article><!--end of exp post-->
 
-                <article class="history-post clf"><!--start of history post-->
+                <article class="exp-post clf"><!--start of exp post-->
 
-                  <div class="history-date">
-                    <p class="history-month">1</p>
-                    <p class="history-year">2016</p>
+                  <div class="exp-date">
+                    <p class="exp-month">1</p>
+                    <p class="exp-year">2016</p>
                   </div>
 
-                  <div class="history-txt gv-9">Senior Front-End developer @<a href="http://diva-lab.com" target="_blank" class="gv-color-main"><strong>Diva-lab</strong></a></div>
+                  <div class="exp-txt gv-9">Senior Front-End developer @<a href="http://diva-lab.com" target="_blank" class="gv-color-main"><strong>Diva-lab</strong></a></div>
 
-                </article><!--end of history post-->
+                </article><!--end of exp post-->
 
-                <article class="history-post clf"><!--start of history post-->
+                <article class="exp-post clf"><!--start of exp post-->
 
-                  <div class="history-date">
-                    <p class="history-month">6</p>
-                    <p class="history-year">2014</p>
+                  <div class="exp-date">
+                    <p class="exp-month">6</p>
+                    <p class="exp-year">2014</p>
                   </div>
 
-                  <div class="history-txt gv-9">Junior Front-End developer @<a href="http://diva-lab.com" target="_blank" class="gv-color-main"><strong>Diva-lab</strong></a></div>
+                  <div class="exp-txt gv-9">Junior Front-End developer @<a href="http://diva-lab.com" target="_blank" class="gv-color-main"><strong>Diva-lab</strong></a></div>
 
-                </article><!--end of history post-->
+                </article><!--end of exp post-->
 
 
-                <article class="history-post clf"><!--start of history post-->
+                <article class="exp-post clf"><!--start of exp post-->
 
-                  <div class="history-date">
-                    <p class="history-month">6</p>
-                    <p class="history-year">2014</p>
+                  <div class="exp-date">
+                    <p class="exp-month">6</p>
+                    <p class="exp-year">2014</p>
                   </div>
 
-                  <div class="history-txt gv-9">Graphic designer @Mohazzabon </div>
+                  <div class="exp-txt gv-9">Graphic designer @Mohazzabon </div>
 
-                </article><!--end of history post-->
+                </article><!--end of exp post-->
 
-                <article class="history-post clf"><!--start of history post-->
+                <article class="exp-post clf"><!--start of exp post-->
 
-                  <div class="history-date">
-                    <p class="history-month">5</p>
-                    <p class="history-year">2012</p>
+                  <div class="exp-date">
+                    <p class="exp-month">5</p>
+                    <p class="exp-year">2012</p>
                   </div>
 
-                  <div class="history-txt gv-9">Call center representative @Orange formerly "Mobinil" </div>
+                  <div class="exp-txt gv-9">Call center representative @Orange formerly "Mobinil" </div>
 
-                </article><!--end of history post-->
+                </article><!--end of exp post-->
 
-                <article class="history-post clf"><!--start of history post-->
+                <article class="exp-post clf"><!--start of exp post-->
 
-                  <div class="history-date">
-                    <p class="history-month">9</p>
-                    <p class="history-year">2010</p>
+                  <div class="exp-date">
+                    <p class="exp-month">9</p>
+                    <p class="exp-year">2010</p>
                   </div>
 
-                  <div class="history-txt gv-9">Cashier and technical @cybercafé.</div>
+                  <div class="exp-txt gv-9">Cashier and technical @cybercafé.</div>
 
-                </article><!--end of history post-->
-              </div>
+                </article><!--end of exp post-->
+              </div><!--end of row-->
+            </div><!--end of container-->
+        </section><!--end of Experience-->
+
+        <section class="testmo section"><!--start of main-->
+          <div class="container"><!--start of container-->
+            <div class="section-header gv-al-cnt ">
+              <h1 class="section-title">Testimonial</h1>
             </div>
-        </section>
-     </main>
+          </div><!--end of container-->
+        </section><!--end of testmo-->
+     </main><!--end of main-->
     <!--==============content Goes here==============================-->
   
     <footer class="footer"><!--start-of footer-->
       <p class="gv-al-cnt">&copy; 2017 Mahmoud Zakaria. All rights reserved. </p>
     </footer><!--end-of footer-->
-    
-    <a href="#home" class="fa fa-hand-o-up up" id="up"></a>
-    <!--JQuery-->
-    <!-- <script src="js/jquery.min.js"></script> -->
-    
+      
     <!--custom-->
     <script src="public/js/main.js"></script>
   </body>

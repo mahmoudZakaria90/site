@@ -7,8 +7,9 @@ window.addEventListener('DOMContentLoaded', function(){
 	stars();
 	scroll.scroll()
 	header.headerTextSlider();
-	header.headerNav();
+	header.headerScroll();
 	document.getElementById('showPotter').onclick = showPotter
 });
 
 window.addEventListener('scroll', scroll.up)
+window.addEventListener('scroll', header.headerNav)

@@ -43,8 +43,6 @@
 				&.show
 					opacity: 1
 
-
-
 	&-title
 		font-size: 130px
 		margin: 0
@@ -69,46 +67,36 @@
 	&-nav
 		text-align: right
 		position: relative
-		padding: 0 40px 0px 0
 		transition: all 450ms
 		&-wrap
-			z-index: 1000000
 			transition: all 450ms
+			align-items: center
 			position: fixed
 			top: 0
-			right: 0
-			bottom: 0
-			display: none
-			align-items: center
+			right: 20px
+			z-index: 1000000
+			&.fixed
+				right: 0
+				background-color: rgba($strongColor, .5)
+				& li a
+					padding-top: 10px
+					padding-bottom: 10px
 		& li
-			display: block
-			margin-bottom: 20px
+			display: inline-block
 			&:last-of-type
 				margin-bottom: 0
 			& a
 				display: block
 				position: relative
-				width: 10px
-				height: 10px
-				background-color: white
-				border-radius: 50%
 				text-decoration: none
-				box-shadow: 0 1px 4px $main-color
+				padding: 40px 20px
+				color: white
+				transition: all 450ms
+
 				&.active
-					background-color: $strongColor
+					// background-color: $strongColor
 					cursor: default
-				&:hover:before
-					opacity: 1
-				&:before
-					content: attr(data-nav)
-					position: absolute
-					right: 25px
-					top: -10px
-					opacity: 0
-					padding: 5px 15px
-					background-color: $strongColor
-					border-radius: 3px
-					transition: all 450ms
+
 
 			
 					

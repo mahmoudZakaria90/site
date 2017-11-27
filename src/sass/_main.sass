@@ -34,14 +34,6 @@
 			right: 15px
 			border-bottom: 1px solid $second-color
 
-.who, .skills, .exp
-	background-color: $whoSection
-.who
-	.section-title
-		margin-bottom: 60px
-	&-img
-		background: url('../img/zek.jpg') no-repeat center center / cover
-
 .code
 	&-img
 		display: flex
@@ -49,15 +41,13 @@
 		justify-content: center
 		background-color: white
 			
-
-
-.skills
-	padding-top: 0
-	text-align: center
+.gv-al-cnt
 	.section-title
 		padding-left: 5rem
 		&:before
 			left: 15px
+.skills
+	padding-top: 0		
 	&-container
 		width: 50%
 		margin: 0 auto
@@ -66,21 +56,16 @@
 			margin: 10px 5px
 
 .port
-	color: white
 	background-image: url('../img/sep.png'), url('../img/sep2.png')
 	background-repeat: repeat-x, repeat-x
 	background-position: top left, bottom, left
 	padding: 6rem 0
 	& .section-title
-		color: white
-		padding-left: 5rem
 		& + p
 			margin-bottom: 6rem
-		&:before
-			left: 15px
 
 
-.history
+.exp
 	&-post
 		margin: 3rem 0
 		display: flex
@@ -181,17 +166,10 @@
 		.section-title
 			padding-left: 0
 
-.potter
-	overflow: hidden
-	position: fixed
-	top: 0
-	left: 0
-	right: 0
-	bottom: 0
-	box-shadow: 0 0 0 9999px rgba(black, .5), 0 0 500px yellow
-	width: 200px
-	height: 200px
-	z-index: 0
-	transition: opacity 1s
-	opacity: 0
-	border-radius: 50%
+
+
+.testmo
+	color: white
+	& .section-title
+		color: white
+	

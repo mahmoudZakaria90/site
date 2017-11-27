@@ -10286,8 +10286,23 @@ module.exports = {
 		slide();
 	},
 	headerNav: function headerNav() {
-		var section = document.getElementsByClassName('section');
-		var navItems = document.querySelectorAll('[data-nav]');
+		var header = document.getElementById('home');
+		var headerNav = document.getElementById('headerNavWrap');
+		if (window.pageYOffset >= header.offsetHeight) {
+			headerNav.classList.add('fixed');
+		} else {
+			headerNav.classList.remove('fixed');
+		}
+	},
+	headerScroll: function headerScroll() {
+		var section = document.querySelectorAll('.section');
+		for (var i = 0; i < section.length; i++) {
+			window.onscroll = function () {
+				if (window.pageYOffset >= section[i].offsetHeight) {
+					alert(section[i].id);
+				}
+			};
+		}
 	}
 };
 
@@ -10303,11 +10318,12 @@ window.addEventListener('DOMContentLoaded', function () {
 	stars();
 	scroll.scroll();
 	header.headerTextSlider();
-	header.headerNav();
+	header.headerScroll();
 	document.getElementById('showPotter').onclick = showPotter;
 });
 
 window.addEventListener('scroll', scroll.up);
+window.addEventListener('scroll', header.headerNav);
 
 },{"./header":2,"./potter":4,"./scroll":5,"./stars":6}],4:[function(require,module,exports){
 'use strict';
