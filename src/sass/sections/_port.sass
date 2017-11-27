@@ -1,0 +1,22 @@
+.port
+	background-image: url('../img/sep.png'), url('../img/sep2.png')
+	background-repeat: repeat-x, repeat-x
+	background-position: top left, bottom, left
+	padding: 6rem 0
+	& .section-title
+		& + p
+			margin-bottom: 6rem
+
+@media (max-width: 768px)
+	.port
+		&-inner.gv-flex
+			display: block
+		&-item
+			width: auto
+			float: none
+			margin-bottom: 3rem
+			&-inner
+				img
+					height: auto
+	.indicator-wrap2
+		display: none
