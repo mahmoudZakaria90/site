@@ -67,7 +67,6 @@
 	&-nav
 		text-align: right
 		position: relative
-		transition: all 450ms
 		&-wrap
 			transition: all 450ms
 			align-items: center
@@ -93,7 +92,30 @@
 				padding: 40px 20px
 				color: white
 				transition: all 450ms
-					
+	&-burger 
+		z-index: 100000
+		position: fixed
+		top: 10px
+		right: 10px
+		transition: all 450ms
+		&.is-opened
+			span
+				&:first-child
+					opacity: 0
+				&:nth-child(2)
+					transform: rotate(-50deg) translate(-7px)
+				&:last-child
+					transform: rotate(48deg) translate(-6px)
+		&.black
+			span
+				border-color: $strongColor
+		span
+			width: 45px 
+			display: block
+			border: 2px solid white
+			margin-top: 7px
+			transition: all 450ms
+
 	&-scroll
 		position: absolute
 		bottom: 0
@@ -127,8 +149,26 @@
 			background-size: 100%
 @media (max-width: 768px)
 	.header
-		&-nav-wrap
-			display: none
+		&-nav
+			&-wrap
+				background-color: rgba(black, .7)
+				right: -50%
+				top: 90px
+				&.is-opened
+					right: 0
+				&.fixed
+					right: -50%
+					&.is-opened
+						right: 0
+					li a 
+						padding: 20px
+			& li
+				display: block
+				a
+					padding-top: 20px
+					padding-bottom: 20px
+
+			
 @media (min-width: 361px) and (max-width: 640px)
 	.header
 		height: auto

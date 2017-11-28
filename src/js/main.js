@@ -7,7 +7,7 @@ window.addEventListener('DOMContentLoaded', function(){
 	stars();
 	scroll.scroll()
 	header.headerTextSlider();
-	header.headerScroll();
+	header.headerBurgerInit();
 	document.getElementById('showPotter').onclick = showPotter
 });
 

@@ -10288,21 +10288,24 @@ module.exports = {
 	headerNav: function headerNav() {
 		var header = document.getElementById('home');
 		var headerNav = document.getElementById('headerNavWrap');
+		var headerBurger = document.getElementById('headerBurger');
 		if (window.pageYOffset >= header.offsetHeight) {
 			headerNav.classList.add('fixed');
+			headerBurger.classList.add('black');
 		} else {
 			headerNav.classList.remove('fixed');
+			headerBurger.classList.remove('black');
 		}
 	},
-	headerScroll: function headerScroll() {
-		var section = document.querySelectorAll('.section');
-		for (var i = 0; i < section.length; i++) {
-			window.onscroll = function () {
-				if (window.pageYOffset >= section[i].offsetHeight) {
-					alert(section[i].id);
-				}
-			};
+	headerBurgerInit: function headerBurgerInit() {
+		var headerNav = document.getElementById('headerNavWrap');
+		var headerBurger = document.getElementById('headerBurger');
+		function cb(e) {
+			e.preventDefault();
+			this.classList.toggle('is-opened');
+			headerNav.classList.toggle('is-opened');
 		}
+		headerBurger.addEventListener('click', cb);
 	}
 };
 
@@ -10318,7 +10321,7 @@ window.addEventListener('DOMContentLoaded', function () {
 	stars();
 	scroll.scroll();
 	header.headerTextSlider();
-	header.headerScroll();
+	header.headerBurgerInit();
 	document.getElementById('showPotter').onclick = showPotter;
 });
 

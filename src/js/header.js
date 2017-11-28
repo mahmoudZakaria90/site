@@ -34,20 +34,24 @@ module.exports = {
 	headerNav() {
 		let header = document.getElementById('home');
 		let headerNav = document.getElementById('headerNavWrap');
+		let headerBurger = document.getElementById('headerBurger');
 		if(window.pageYOffset >= header.offsetHeight){
 			headerNav.classList.add('fixed');
+			headerBurger.classList.add('black');
 		} else {
 			headerNav.classList.remove('fixed');
+			headerBurger.classList.remove('black');
+
 		}
 	},
-	headerScroll() {
-		let section = document.querySelectorAll('.section');
-		for (var i = 0; i < section.length; i++) {
-			window.onscroll = function(){
-				if(window.pageYOffset >= section[i].offsetHeight){
-					alert(section[i].id)
-				}
-			}
+	headerBurgerInit() {
+		let headerNav = document.getElementById('headerNavWrap');
+		let headerBurger = document.getElementById('headerBurger');
+		function cb(e) {
+			e.preventDefault()
+			this.classList.toggle('is-opened');
+			headerNav.classList.toggle('is-opened');
 		}
+		headerBurger.addEventListener('click', cb)
 	}
 }
