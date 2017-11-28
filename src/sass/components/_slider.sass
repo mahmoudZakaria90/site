@@ -1,5 +1,5 @@
 /*Slider*/
-$base: 4
+$base: 8
 .indicator
 	width: 10px
 	height: 10px
@@ -84,73 +84,60 @@ $base: 4
 	
 @for $i from 2 to $base
 	.indicator-btn2:nth-of-type(#{$i}):checked
-		& ~ .port-slider .port-inner
+		& ~ .static-slider .static-inner
 			transform: translateX(-($i - 1) * 100%)
 
 		& ~ .indicator-wrap2 .indicator:nth-of-type(#{$i})
 			cursor: default
 			background-color: $strongColor
 	.indicator-btn2:nth-of-type(#{$base}):checked 
-		& ~ .port-slider .port-inner
+		& ~ .static-slider .static-inner
 			transform: translateX(-($base - 1) * 100%)
 		& ~ .indicator-wrap2 .indicator:nth-of-type(#{$base})
 			cursor: default
 			background-color: $strongColor
 
-.port
+.static
 	&-slider
 		overflow: hidden
 		margin-bottom: 8rem
 	&-inner
 		transition: all 450ms
-
-	&-slide
-		flex-basis: 100%
-		.row
-			margin: 0
-
-	&-item
-		&.gv-4
-			padding: 0
-		&-inner
-			position: relative
-			display: block
-			background-size: 200%
-			background-repeat: no-repeat
-			background-position: center center
-			box-shadow: 0 0 1px rgba(0,0,0,0)
-			overflow: hidden
-			transform: translateZ(0)
-			img
-				transition: all 450ms
-				transform: scale(1.1)
-				height: 171px
-			&:hover
-				img
-					transform: scale(1.3)
-			&:hover h3
-				opacity: 1
-
-		h3
-			font-family: $main-face
-			background-color: rgba(#111, .85)
-			position: absolute
-			bottom: 0
-			left: 0
-			right: 0
-			top: 0
-			display: flex
-			flex-direction: column
-			justify-content: center
-			align-items: center
+	
+	&-img
+		width: 200px
+		height: 200px
+		margin: 30px auto
+		background-color: white
+		border-radius: 30%
+		background-repeat: no-repeat
+		background-size: cover
+		background-position: center
+	&-txt
+		text-align: center
+		h1
 			margin-bottom: 0
-			opacity: 0
-			color: white
-			text-decoration: none
-			transition: all 450ms
-			span
-				font-size: $h5
-				color: #a0a0a0
-					display: block
+		&-title
+			margin-bottom: 60px
+			font-size: 18px
+			color: $strongColor
+			line-height: normal
+		&-para
+			quotes: "“" "”"
+			width: 70%
+			margin: 15px auto 0
+			font-size: 26px
+			&:before, &:after
+				margin: 5px
+				font-family: sans-serif
+			&:before
+				content: open-quote
+			&:after
+				content: close-quote
 
-
+@media(max-width: 768px)
+	.static
+		&-inner.gv-flex
+			display: block
+		&-txt-para
+			width: auto

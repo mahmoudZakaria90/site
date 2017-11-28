@@ -6,11 +6,59 @@
 	& .section-title
 		& + p
 			margin-bottom: 6rem
+	&-slide
+		flex-basis: 100%
+		.row
+			margin: 0
+
+	&-item
+		&.gv-4
+			padding: 0
+		&-inner
+			position: relative
+			display: block
+			background-size: 200%
+			background-repeat: no-repeat
+			background-position: center center
+			box-shadow: 0 0 1px rgba(0,0,0,0)
+			overflow: hidden
+			transform: translateZ(0)
+			img
+				transition: all 450ms
+				transform: scale(1.1)
+				height: 171px
+			&:hover
+				img
+					transform: scale(1.3)
+			&:hover h3
+				opacity: 1
+
+		h3
+			font-family: $main-face
+			background-color: rgba(#111, .85)
+			position: absolute
+			bottom: 0
+			left: 0
+			right: 0
+			top: 0
+			display: flex
+			flex-direction: column
+			justify-content: center
+			align-items: center
+			margin-bottom: 0
+			opacity: 0
+			color: white
+			text-decoration: none
+			transition: all 450ms
+			span
+				font-size: $h5
+				color: #a0a0a0
+					display: block
+
+
 
 @media (max-width: 768px)
 	.port
-		&-inner.gv-flex
-			display: block
 		&-item
 			width: auto
 			float: none
