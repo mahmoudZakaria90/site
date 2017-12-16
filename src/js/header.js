@@ -4,6 +4,7 @@ module.exports = {
 		let data = [
 		'Talented, Innovator and a Seeker in the web industry',
 		'Someone who makes noises in user interfaces',
+		'<strong style="font-size: 30px">Curiosity</strong> is my compass',
 		'For hiring, <a href="mailto:me@the-zek.com">me@the-zek.com</a>'
 		]
 
