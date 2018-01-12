@@ -5,7 +5,7 @@ module.exports = {
 		'Talented, Innovator and a Seeker in the web industry',
 		'Someone who makes noises in user interfaces',
 		'<strong style="font-size: 30px">Curiosity</strong> is my compass',
-		'For hiring, <a href="mailto:me@zakcoding.com">me@the-zek.com</a>'
+		'For hiring, <a href="mailto:me@zakcoding.com">me@zakcoding.com</a>'
 		]
 
 		function init(){
