@@ -10289,7 +10289,7 @@ module.exports = {
 		var header = document.getElementById('home');
 		var headerNav = document.getElementById('headerNavWrap');
 		var headerBurger = document.getElementById('headerBurger');
-		if (window.pageYOffset >= header.offsetHeight) {
+		if (window.pageYOffset >= header.offsetHeight - 100) {
 			headerNav.classList.add('fixed');
 			headerBurger.classList.add('black');
 		} else {
