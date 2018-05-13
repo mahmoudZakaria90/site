@@ -3,6 +3,7 @@ module.exports = {
 		let el = document.querySelector('#headerTextSlider');
 		let data = [
 		'Talented, Innovator and a Seeker in the web industry',
+		'<strong style="color: red">&hearts;</strong> Front-end development',
 		'Someone who makes noises in user interfaces',
 		'<strong style="font-size: 30px">Curiosity</strong> is my compass',
 		'For hiring, <a href="mailto:me@zakcoding.com">me@zakcoding.com</a>'
