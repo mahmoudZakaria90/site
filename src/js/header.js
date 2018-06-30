@@ -37,7 +37,7 @@ module.exports = {
 		let header = document.getElementById('home');
 		let headerNav = document.getElementById('headerNavWrap');
 		let headerBurger = document.getElementById('headerBurger');
-		if(window.pageYOffset >= header.offsetHeight - 100){
+		if(window.pageYOffset >= 200){
 			headerNav.classList.add('fixed');
 			headerBurger.classList.add('black');
 		} else {
