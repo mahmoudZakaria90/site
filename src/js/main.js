@@ -19,3 +19,4 @@ window.addEventListener('DOMContentLoaded', function(){
 
 window.addEventListener('scroll', scroll.up)
 window.addEventListener('scroll', header.headerNav)
+window.addEventListener('DOMContentLoaded', header.headerNav)

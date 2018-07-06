@@ -10443,6 +10443,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
 window.addEventListener('scroll', scroll.up);
 window.addEventListener('scroll', header.headerNav);
+window.addEventListener('DOMContentLoaded', header.headerNav);
 
 },{"./header":2,"./potter":4,"./scroll":5,"./stars":6}],4:[function(require,module,exports){
 'use strict';
