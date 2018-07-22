@@ -17,6 +17,6 @@ window.addEventListener('DOMContentLoaded', function(){
 	document.getElementById('showPotter').onclick = showPotter
 });
 
-window.addEventListener('scroll', scroll.up)
-window.addEventListener('scroll', header.headerNav)
-window.addEventListener('DOMContentLoaded', header.headerNav)
+window.addEventListener('scroll', scroll.up);
+window.addEventListener('scroll', header.headerNav);
+window.addEventListener('DOMContentLoaded', header.headerNav);
