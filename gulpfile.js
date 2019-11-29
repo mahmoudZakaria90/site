@@ -15,7 +15,7 @@ const fs = require("fs");
 
 //sass
 gulp.task("sass", function() {
-  sass("./src/sass/*.sass", { style: "compressed" })
+  sass("./src/sass/**/*.sass", { style: "compressed" })
     .on("error", sass.logError)
     .pipe(autoprefixer())
     .pipe(gulp.dest("./public/css"))

@@ -1,6 +1,8 @@
 /*General*/
 /*============*/
 //Simple reset
+@import vars/_typography
+@import vars/_colors
 
 *
 	margin: 0
@@ -13,15 +15,14 @@
 		-webkit-box-sizing: border-box
 		-moz-box-sizing: border-box
 		box-sizing: border-box
-	
+
 //base font size
 \:root
-	font-size: 10px
+		font-size: 10px
 
 html,
 body
 	height: 100%
-
 
 body
 	font-family: $main-face
@@ -29,27 +30,16 @@ body
 	line-height: 1.5
 	color: $main-color
 	font-weight: 400
-	direction: $dir2
 	background-color: black
-	&.potterme
-		cursor: url('../img/wand.png'), auto
-
-/*Give All anchors/button a transition*/
-a,
-button,
-input
-	+gvTransition(background-color 450ms,color 450ms)
 
 a
 	color: inherit
 
-img  
+img
 	max-width: 100%
 	vertical-align: middle
 	border: none
 
-
 strong
 	font-weight: 900
 	color: $strongColor
-
