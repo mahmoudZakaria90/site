@@ -9,12 +9,12 @@ function experience() {
 
 module.exports = function () {
   var el = document.querySelector("#headerTextSlider");
-  var data = ["A Front-end developer with <strong>+" + experience() + "</strong> years of experience", "Thinking out of the box and seeking for knowledge is my vision", 'For hiring, <a href="mailto:m.zakria90@gmail.com">m.zakria90@gmail.com</a>'];
+  var data = ["A Front-end developer with <strong>+" + experience() + "</strong> years of experience.", "Thinking out of the box and seeking for knowledge is my vision.", 'For hiring, <a href="mailto:m.zakria90@gmail.com">m.zakria90@gmail.com</a>'];
 
   function init() {
-    el.innerHTML = "<span class=\"show\">" + data[0] + ".</span>";
+    el.innerHTML = "<span class=\"show\">" + data[0] + "</span>";
     for (var i = 1; i < data.length; i++) {
-      var temp = "<span>" + data[i] + ".</span>";
+      var temp = "<span>" + data[i] + "</span>";
       el.innerHTML += temp;
     }
   }
