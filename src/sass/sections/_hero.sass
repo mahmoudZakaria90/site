@@ -1,9 +1,19 @@
+@keyframes gradient
+
+	0%
+		background-position: 0% 50%
+	50%
+		background-position: 100% 50%
+	100%
+		background-position: 0% 50%
+
 .header
-	background-color: black
+	background: linear-gradient(270deg, #71BAF5 0%,#0DD1FA 25%,#00E4E6 50%,#54F2BF 75%,#A9F992 100%)
+	background-size: 1000% 1000%
 	height: 100vh
-	color: white
 	position: relative
 	overflow: hidden
+	animation: gradient 30s ease infinite
 	&-bg
 		position: absolute
 		top: 0
@@ -21,7 +31,6 @@
 		padding: 0 1.5rem
 		width: 100%
 		text-align: center
-		color: white
 		z-index: 3
 		&-slider
 			margin-top: 1.5rem
@@ -48,14 +57,12 @@
 		font-size: 40px
 		font-family: $heading-face
 		margin: 0
-		color: rgba(white, 1)
-		text-shadow: 0 0 50px white
 		@media(min-width: 1200px)
 			&
 				font-size: 130px
 
 	a
-		color: white
+		color: #fff
 	&-social
 		margin-top: 10rem
 		@media(min-width: 600px)
@@ -79,4 +86,4 @@
 		bottom: 0
 		width: 100%
 		text-align: center
-		padding-bottom: 1rem
+		padding-bottom: 2rem
