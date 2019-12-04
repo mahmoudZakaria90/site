@@ -1,9 +1,15 @@
-/*General*/
-/*============*/
-//Simple reset
 @import vars/_typography
 @import vars/_colors
 
+@keyframes gradient
+	0%
+		background-position: 0% 0%
+	50%
+		background-position: 100% 0%
+	100%
+		background-position: 0% 0%
+
+//Simple reset
 *
 	margin: 0
 	padding: 0
@@ -18,7 +24,7 @@
 
 //base font size
 \:root
-		font-size: 10px
+	font-size: 10px
 
 html,
 body
@@ -30,7 +36,8 @@ body
 	line-height: 1.5
 	color: $main-color
 	font-weight: 400
-	background-color: black
+	background: linear-gradient(90deg, #71BAF5 0%,#0DD1FA 25%,#00E4E6 50%,#54F2BF 75%,#00d67d 100%) 0 0 / 1000% 1000%
+	animation: gradient 40s ease infinite
 
 a
 	color: inherit

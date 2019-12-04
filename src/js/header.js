@@ -5,7 +5,7 @@ function experience() {
 }
 
 module.exports = function() {
-  let el = document.querySelector("#headerTextSlider");
+  let el = document.querySelector("#heroTextSlider");
   let data = [
     `A Front-end developer with <strong>+${experience()}</strong> years of experience.`,
     "Thinking out of the box and seeking for knowledge is my vision.",
@@ -29,10 +29,9 @@ module.exports = function() {
         i = 0;
       }
       for (let i = 0; i < data.length; i++) {
-        document.getElementById("headerTextSlider").children[i].className = "";
+        document.getElementById("heroTextSlider").children[i].className = "";
       }
-      document.getElementById("headerTextSlider").children[i].className =
-        "show";
+      document.getElementById("heroTextSlider").children[i].className = "show";
     }, 5000);
   }
   slide();

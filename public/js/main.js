@@ -8,7 +8,7 @@ function experience() {
 }
 
 module.exports = function () {
-  var el = document.querySelector("#headerTextSlider");
+  var el = document.querySelector("#heroTextSlider");
   var data = ["A Front-end developer with <strong>+" + experience() + "</strong> years of experience.", "Thinking out of the box and seeking for knowledge is my vision.", 'For hiring, <a href="mailto:m.zakria90@gmail.com">m.zakria90@gmail.com</a>'];
 
   function init() {
@@ -28,9 +28,9 @@ module.exports = function () {
         i = 0;
       }
       for (var _i = 0; _i < data.length; _i++) {
-        document.getElementById("headerTextSlider").children[_i].className = "";
+        document.getElementById("heroTextSlider").children[_i].className = "";
       }
-      document.getElementById("headerTextSlider").children[i].className = "show";
+      document.getElementById("heroTextSlider").children[i].className = "show";
     }, 5000);
   }
   slide();
