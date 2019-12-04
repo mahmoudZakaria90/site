@@ -9,7 +9,7 @@ function experience() {
 
 module.exports = function () {
   var el = document.querySelector("#heroTextSlider");
-  var data = ["A Front-end developer with <strong>+" + experience() + "</strong> years of experience.", "Thinking out of the box and seeking for knowledge is my vision.", 'For hiring, <a href="mailto:m.zakria90@gmail.com">m.zakria90@gmail.com</a>'];
+  var data = ["A Front-end developer with <strong>+" + experience() + "</strong> years of experience building websites and web apps.", "Thinking out of the box and seeking for knowledge is my vision.", 'For hiring, <a href="mailto:m.zakria90@gmail.com">m.zakria90@gmail.com</a>'];
 
   function init() {
     el.innerHTML = "<span class=\"show\">" + data[0] + "</span>";
