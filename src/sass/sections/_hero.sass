@@ -3,22 +3,21 @@
 	display: flex
 	align-items: center
 	&-text
-		margin: auto
 		text-align: center
 		padding: 0 25px
-		@media(max-width: 1199px)
-			flex-grow: 1
 		&-slider
 			position: relative
-			font-size: 1.9rem
+			font-size: 1.6rem
 			color: white
-			height: 56px
-			max-width: 402px
+			height: 29px
 			margin: auto
+			@media(min-width: 480px)
+				font-size: 1.9rem
 			@media(min-width: 1200px)
 				font-size: 25px
 				height: 37px
-				max-width: none
+			@media(max-width: 479px)
+				height: 40px
 			span
 				transition: all 450ms
 				opacity: 0
@@ -34,9 +33,11 @@
 				&.show
 					opacity: 1
 	&-title
-		font-size: 40px
+		font-size: 35px
 		font-family: $heading-face
 		margin: 0
+		@media(min-width: 480px)
+			font-size: 60px
 		@media(min-width: 1200px)
 			font-size: 130px
 			line-height: 1.2
@@ -64,7 +65,7 @@
 
 	.copyright
 		position: absolute
+		padding: 0 15px 2rem
 		bottom: 0
 		width: 100%
 		text-align: center
-		padding-bottom: 2rem
