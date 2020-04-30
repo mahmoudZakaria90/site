@@ -39,7 +39,7 @@
     "gulp-ruby-sass": "^2.1.1",
     "gulp-uglify": "^3.0.2",
     "gulp-util": "^3.0.8",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "jshint": "^2.10.2",
     "pump": "^1.0.3",
     "rimraf": "^2.7.1",
